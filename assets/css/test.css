@@ -1,0 +1,191 @@
+@font-face {
+  font-family: "Myriad Pro Regular";
+  src: url("MyriadPro-Regular.eot");
+  src: url("MyriadPro-Regular.eot?#iefix") format("embedded-opentype"), url("MyriadPro-Regular.woff") format("woff"), url("MyriadPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 100px;
+      grid-template-rows: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 100px;
+      grid-template-areas: "header" "sub-header" "features" "check" "screenhots" "comments" "support" "newsletter" "blog" "get" "footer";
+}
+
+body .header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  background-color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.3fr 0.3fr 1fr;
+      grid-template-columns: 0.3fr 0.3fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "header-logo . header-nav";
+}
+
+body .header .header__logo_width {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header-logo;
+  width: 200px;
+}
+
+body .header .header__nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: header-nav;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+  font-family: "Myriad Pro Regular", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+body .header .header__nav .nav__link {
+  color: black;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  -webkit-transition: text-shadow 0.05s linear;
+  transition: text-shadow 0.05s linear;
+}
+
+body .header .header__nav .nav__link:hover {
+  color: white;
+  border-radius: 30px 30px;
+  background-color: #a62ad7;
+}
+
+body .sub__header {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: sub-header;
+  background: url(../images/bg.jpg) center no-repeat;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-gap: 20px;
+      grid-template-areas: "sub-phone sub-empires";
+}
+
+body .sub__header .sub__phone {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: sub-phone;
+  width: 100%;
+  height: 100vh;
+}
+
+body .sub__header .sub__empires {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: sub-empires;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 50px 100px;
+      grid-template-rows: 1fr 1fr 50px 100px;
+      grid-template-areas: "hello" "description" "download" "icons";
+}
+
+body .sub__header .sub__empires .empires__hello {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: hello;
+  color: white;
+  font-size: 60px;
+  font-weight: 700;
+  text-align: left;
+  line-height: 1;
+}
+
+body .sub__header .sub__empires .empires__description {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: description;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  color: white;
+  text-align: left;
+}
+
+body .sub__header .sub__empires .empires__download {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: download;
+  margin-top: 20px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 30px;
+  color: white;
+  text-align: left;
+}
+
+body .sub__header .sub__empires .empires__icons {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: icons;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 250px 250px;
+      grid-template-columns: 250px 250px;
+  -ms-grid-rows: 90px;
+      grid-template-rows: 90px;
+      grid-template-areas: "appStore" "googlePlay";
+}
+
+body .sub__header .sub__empires .empires__icons .empires__appStore {
+  width: 250px;
+  opacity: 0.75;
+}
+
+body .sub__header .sub__empires .empires__icons .empires__googlePlay {
+  width: 250px;
+  opacity: 0.75;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+
+body .sub__header .sub__empires .empires__icons .empires__appStore:hover,
+body .sub__header .sub__empires .empires__icons .empires__googlePlay:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+/*# sourceMappingURL=test.css.map */
