@@ -119,17 +119,68 @@ body .sub__header .sub__phone {
 }
 
 body .sub__header .sub__phone .phone__apple {
+  position: relative;
+  bottom: 3px;
+  left: 200px;
   background-image: url(../images/apple-war.png);
-  background-size: 321.5px;
+  background-size: 320px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
+  z-index: 5;
+  -webkit-animation: apple-display 1.5s linear;
+          animation: apple-display 1.5s linear;
+}
+
+@-webkit-keyframes apple-display {
+  0% {
+    bottom: 3px;
+    left: -480px;
+  }
+  100% {
+    bottom: 3px;
+    left: 200px;
+  }
+}
+
+@keyframes apple-display {
+  0% {
+    bottom: 3px;
+    left: -480px;
+  }
+  100% {
+    bottom: 3px;
+    left: 200px;
+  }
 }
 
 body .sub__header .sub__phone .phone__samsung {
+  position: relative;
   background-image: url(../images/phone.png);
   background-size: 300px;
   background-repeat: no-repeat;
   background-position: center;
+  opacity: 1;
+  z-index: 10;
+  -webkit-animation: samsung-display 1.2s linear;
+          animation: samsung-display 1.2s linear;
+}
+
+@-webkit-keyframes samsung-display {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes samsung-display {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 body .sub__header .sub__empires {
@@ -215,11 +266,11 @@ body .sub__header .sub__empires .empires__icons .empires__appStore:hover,
 body .sub__header .sub__empires .empires__icons .empires__googlePlay:hover {
   opacity: 1;
   cursor: pointer;
-  -webkit-animation: move 0.5s linear infinite alternate;
-          animation: move 0.5s linear infinite alternate;
+  -webkit-animation: store-move 0.5s linear infinite alternate;
+          animation: store-move 0.5s linear infinite alternate;
 }
 
-@-webkit-keyframes move {
+@-webkit-keyframes store-move {
   0% {
     width: 200px;
   }
@@ -228,7 +279,7 @@ body .sub__header .sub__empires .empires__icons .empires__googlePlay:hover {
   }
 }
 
-@keyframes move {
+@keyframes store-move {
   0% {
     width: 200px;
   }
@@ -604,5 +655,9 @@ body .check .check__phone {
   -ms-grid-row-span: 3;
   -ms-grid-column: 2;
   grid-area: check-phone;
+  background-image: url(../images/castle.png);
+  background-size: 415px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-/*# sourceMappingURL=test-2.css.map */
+/*# sourceMappingURL=index.css.map */

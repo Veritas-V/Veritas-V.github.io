@@ -88,16 +88,45 @@ body {
             width: 100%;
             height: 100vh;
             .phone__apple {
+                position: relative;
+                bottom: 3px;
+                left: 200px;
                 background-image: url(../images/apple-war.png);
-                background-size: 321.5px;
+                background-size: 320px;
                 background-repeat: no-repeat;
-                background-position: center;
+                background-position: right;
+                z-index: 5;
+                animation: apple-display 1.5s linear;
+            }
+            @keyframes apple-display {
+                0% {
+                    bottom: 3px;
+                    left: -480px;
+                }
+                100% {
+                    bottom: 3px;
+                    left: 200px;
+                }
             }
             .phone__samsung {
+                position: relative;
                 background-image: url(../images/phone.png);
                 background-size: 300px;
                 background-repeat: no-repeat;
                 background-position: center;
+                opacity: 1;
+                z-index: 10;
+                animation: samsung-display 1.2s linear;
+            }
+            @keyframes samsung-display {
+                0% {
+                    // left: -680px;
+                    opacity: 0;
+                }
+                100% {
+                    // left: 0;
+                    opacity: 1;
+                }
             }
         }
         .sub__empires {
@@ -164,9 +193,9 @@ body {
                 .empires__googlePlay:hover {
                     opacity: 1;
                     cursor: pointer;
-                    animation: move 0.5s linear infinite alternate;
+                    animation: store-move 0.5s linear infinite alternate;
                 }
-                @keyframes move {
+                @keyframes store-move {
                     0% {
                         width: 200px;
                     }
@@ -421,52 +450,15 @@ body {
         }
         .check__phone {
             grid-area: check-phone;
+            // background-image: url(../images/hand.png);
+            background-image: url(../images/castle.png);
+            // background-size: 575px;
+            background-size: 415px;
+            background-repeat: no-repeat;
+            background-position: center;
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // @font-face {
 //     font-family: 'Myriad Pro Regular';
@@ -477,10 +469,6 @@ body {
 //     font-weight: normal;
 //     font-style: normal;
 // }
-
-
-
-
 
 // body {
 //     margin: 0;
