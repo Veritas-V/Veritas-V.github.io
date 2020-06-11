@@ -6,12 +6,17 @@
     font-weight: normal;
     font-style: normal;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
 }
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 1em;
     display: grid;
     grid-template-columns: 1fr;
@@ -62,13 +67,13 @@ body {
             .nav__link:hover {
                 color: white;
                 border-radius: 30px 30px;
-                background-color: #a62ad7;
+                background-color: rgb(179, 100, 211);
             }
         }
     }
     .sub__header {
         grid-area: sub-header;
-        background: url(../images/bg.jpg) center no-repeat;
+        background: url(../images/index.png) center no-repeat;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
@@ -76,8 +81,24 @@ body {
         grid-template-areas: "sub-phone sub-empires";
         .sub__phone {
             grid-area: sub-phone;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "phone-samsung phone-apple";
             width: 100%;
             height: 100vh;
+            .phone__apple {
+                background-image: url(../images/apple-war.png);
+                background-size: 321.5px;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .phone__samsung {
+                background-image: url(../images/phone.png);
+                background-size: 300px;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
         }
         .sub__empires {
             grid-area: sub-empires;
@@ -97,8 +118,7 @@ body {
                 font-size: 60px;
                 font-weight: 700;
                 text-align: left;
-                line-height: 1;
-                
+                line-height: 72px;
             }
             .empires__description {
                 grid-area: description;
@@ -114,7 +134,7 @@ body {
                 margin-top: 20px;
                 font-size: 28px;
                 font-weight: 600;
-                line-height: 30px;
+                line-height: 28px;
                 color: white;
                 text-align: left;
             }
@@ -124,15 +144,19 @@ body {
                 grid-template-columns: 250px 250px;
                 grid-template-rows: 90px;
                 grid-template-areas:
-                "appStore"
-                "googlePlay";
+                    "appStore"
+                    "googlePlay";
                 .empires__appStore {
-                    width: 250px;
+                    margin-top: 20px;
+                    width: 200px;
                     opacity: 0.75;
-                    // background-position-y: ;
+                    // background-image: url(../assets/images/store.png);
+                    // background-repeat: no-repeat;
+                    // background-position: center;
                 }
                 .empires__googlePlay {
-                    width: 250px;
+                    margin-top: 20px;
+                    width: 200px;
                     opacity: 0.75;
                     transition: opacity 0.2s linear;
                 }
@@ -140,8 +164,263 @@ body {
                 .empires__googlePlay:hover {
                     opacity: 1;
                     cursor: pointer;
+                    animation: move 0.5s linear infinite alternate;
+                }
+                @keyframes move {
+                    0% {
+                        width: 200px;
+                    }
+                    // 50% {
+                    //     width: 225px;
+                    // }
+                    100% {
+                        width: 230px;
+                    }
                 }
             }
+        }
+    }
+    .content {
+        grid-area: features;
+        background: url(../images/bg2.png) center no-repeat;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr 1fr;
+        grid-gap: 25px;
+        grid-template-areas:
+            "content-banner"
+            "content-main"
+            "content-advantage";
+        .content__banner {
+            grid-area: content-banner;
+            color: #3b434d;
+            font-size: 60px;
+            font-weight: 600;
+            // line-height: 22px;
+            justify-self: center;
+            align-self: end;
+        }
+        .content__main {
+            grid-area: content-main;
+            color: #3b434d;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 30px;
+            justify-self: center;
+            align-self: start;
+        }
+        .content__advantage {
+            grid-area: content-advantage;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 0.5fr 1fr;
+            grid-template-areas:
+                "advantage-community advantage-event advantage-three"
+                "advantage-community advantage-event advantage-three"
+                "advantage-community advantage-event advantage-three";
+            .advantage__community {
+                grid-area: advantage-community;
+                text-align: center;
+                .community__svg {
+                    width: 133.6px;
+                    transition: background-color 0.5s linear;
+                    transition: border-radius 0.01s linear;
+                }
+                .community__svg:hover {
+                    background-color: #fdf378;
+                    border-radius: 25px;
+                }
+                .community__banner {
+                    color: #3b434d;
+                    font-size: 30px;
+                    font-weight: 600;
+                    // line-height: 26px;
+                }
+                .community__content {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 30px;
+                    margin-top: 20px;
+                }
+            }
+            .advantage__event {
+                grid-area: advantage-event;
+                text-align: center;
+                .event__svg {
+                    width: 133.6px;
+                    transition: background-color 0.5s linear;
+                    transition: border-radius 0.01s linear;
+                }
+                .event__svg:hover {
+                    background-color: #fdf378;
+                    border-radius: 25px;
+                }
+                .event__banner {
+                    color: #3b434d;
+                    font-size: 30px;
+                    font-weight: 600;
+                    // line-height: 26px;
+                }
+                .event__content {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 30px;
+                    margin-top: 20px;
+                }
+            }
+            .advantage__three {
+                grid-area: advantage-three;
+                text-align: center;
+                .three__svg {
+                    width: 133.6px;
+                    transition: background-color 0.5s linear;
+                    transition: border-radius 0.01s linear;
+                }
+                .three__svg:hover {
+                    background-color: #fdf378;
+                    border-radius: 25px;
+                }
+                .three__banner {
+                    color: #3b434d;
+                    font-size: 30px;
+                    font-weight: 600;
+                    // line-height: 26px;
+                }
+                .three__content {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 30px;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    .check {
+        grid-area: check;
+        background: url(../images/bg3.png) center no-repeat;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "check-banner check-banner"
+            "check-time check-phone"
+            "check-space check-phone"
+            "check-settings check-phone";
+        .check__banner {
+            grid-area: check-banner;
+            color: white;
+            font-size: 60px;
+            font-weight: 400;
+            line-height: 72px;
+            justify-self: center;
+            align-self: center;
+        }
+        .check__time {
+            grid-area: check-time;
+            display: grid;
+            grid-template-columns: 0.2fr 1fr;
+            grid-template-rows: 0.2fr 1fr;
+            grid-template-areas:
+                "time-icons time-banner"
+                "time-icons time-content";
+            .time__icons {
+                grid-area: time-icons;
+                justify-self: end;
+                align-self: start;
+                margin-right: 10px;
+            }
+            .time__banner {
+                grid-area: time-banner;
+                color: white;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 24px;
+                justify-self: start;
+                align-self: end;
+            }
+            .time__content {
+                grid-area: time-content;
+                color: white;
+                margin: 16px 0;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                justify-self: start;
+                align-self: start;
+            }
+        }
+        .check__space {
+            grid-area: check-space;
+            display: grid;
+            grid-template-columns: 0.2fr 1fr;
+            grid-template-rows: 0.2fr 1fr;
+            grid-template-areas:
+                "space-icons space-banner"
+                "space-icons space-content";
+            .space__icons {
+                grid-area: space-icons;
+                width: 42.4px;
+                justify-self: end;
+                align-self: start;
+                margin-right: 10px;
+            }
+            .space__banner {
+                grid-area: space-banner;
+                color: white;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 24px;
+                justify-self: start;
+                align-self: end;
+            }
+            .space__content {
+                grid-area: space-content;
+                color: white;
+                margin: 16px 0;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                justify-self: start;
+                align-self: start;
+            }
+        }
+        .check__settings {
+            grid-area: check-settings;
+            display: grid;
+            grid-template-columns: 0.2fr 1fr;
+            grid-template-rows: 0.2fr 1fr;
+            grid-template-areas:
+                "settings-icons settings-banner"
+                "settings-icons settings-content";
+            .settings__icons {
+                grid-area: settings-icons;
+                justify-self: end;
+                align-self: start;
+                margin-right: 10px;
+            }
+            .settings__banner {
+                grid-area: settings-banner;
+                color: white;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 24px;
+                justify-self: start;
+                align-self: end;
+            }
+            .settings__content {
+                grid-area: settings-content;
+                color: white;
+                margin: 16px 0;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                justify-self: start;
+                align-self: start;
+            }
+        }
+        .check__phone {
+            grid-area: check-phone;
         }
     }
 }
