@@ -15,12 +15,12 @@ h6 {
     margin: 0;
 }
 body {
-    margin: 0;
+    margin: 0 auto;
     font-family: "Open Sans", sans-serif;
     font-size: 1em;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 100px;
+    grid-template-rows: 100px 860px 835px 805px 900px 520px 985px 530px 890px 745px 100px;
     grid-template-areas:
         "header"
         "sub-header"
@@ -76,14 +76,14 @@ body {
         background: url(../images/index.png) center no-repeat;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: 860px;
         grid-gap: 20px;
         grid-template-areas: "sub-phone sub-empires";
         .sub__phone {
             grid-area: sub-phone;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr;
+            grid-template-rows: 860px;
             grid-template-areas: "phone-samsung phone-apple";
             width: 100%;
             height: 100vh;
@@ -91,7 +91,7 @@ body {
                 position: relative;
                 bottom: 3px;
                 left: 200px;
-                background-image: url(../images/apple-war.png);
+                background-image: url(../images/apple.png);
                 background-size: 320px;
                 background-repeat: no-repeat;
                 background-position: right;
@@ -110,22 +110,22 @@ body {
             }
             .phone__samsung {
                 position: relative;
-                background-image: url(../images/phone.png);
+                background-image: url(../images/samsung.png);
                 background-size: 300px;
                 background-repeat: no-repeat;
                 background-position: center;
-                opacity: 1;
+                // opacity: 1;
                 z-index: 10;
-                animation: samsung-display 1.2s linear;
+                animation: samsung-display 3.8s ease-in;
             }
             @keyframes samsung-display {
                 0% {
-                    // left: -680px;
-                    opacity: 0;
+                    left: -880px;
+                    // opacity: 0;
                 }
                 100% {
-                    // left: 0;
-                    opacity: 1;
+                    left: 0;
+                    // opacity: 1;
                 }
             }
         }
@@ -193,19 +193,21 @@ body {
                 .empires__googlePlay:hover {
                     opacity: 1;
                     cursor: pointer;
-                    animation: store-move 0.5s linear infinite alternate;
+                    transition: transform 0.3s linear;
+                    transform: scale(1.2);
+                    // animation: store-move 0.5s linear infinite alternate;
                 }
-                @keyframes store-move {
-                    0% {
-                        width: 200px;
-                    }
-                    // 50% {
-                    //     width: 225px;
-                    // }
-                    100% {
-                        width: 230px;
-                    }
-                }
+                // @keyframes store-move {
+                //     0% {
+                //         width: 200px;
+                //     }
+                //     // 50% {
+                //     //     width: 225px;
+                //     // }
+                //     100% {
+                //         width: 230px;
+                //     }
+                // }
             }
         }
     }
@@ -214,8 +216,8 @@ body {
         background: url(../images/bg2.png) center no-repeat;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.5fr 0.5fr 1fr;
-        grid-gap: 25px;
+        grid-template-rows: 200px 200px 435px;
+        // grid-gap: 25px;
         grid-template-areas:
             "content-banner"
             "content-main"
@@ -243,7 +245,7 @@ body {
             grid-area: content-advantage;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 0.5fr 1fr;
+            grid-template-rows: 160px 115px 160px;
             grid-template-areas:
                 "advantage-community advantage-event advantage-three"
                 "advantage-community advantage-event advantage-three"
@@ -330,7 +332,7 @@ body {
         background: url(../images/bg3.png) center no-repeat;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 201.25px 201.25px 201.25px 201.25px;
         grid-template-areas:
             "check-banner check-banner"
             "check-time check-phone"
@@ -349,7 +351,7 @@ body {
             grid-area: check-time;
             display: grid;
             grid-template-columns: 0.2fr 1fr;
-            grid-template-rows: 0.2fr 1fr;
+            grid-template-rows: 30px 171.25px;
             grid-template-areas:
                 "time-icons time-banner"
                 "time-icons time-content";
@@ -383,7 +385,7 @@ body {
             grid-area: check-space;
             display: grid;
             grid-template-columns: 0.2fr 1fr;
-            grid-template-rows: 0.2fr 1fr;
+            grid-template-rows: 30px 171.25px;
             grid-template-areas:
                 "space-icons space-banner"
                 "space-icons space-content";
@@ -418,7 +420,7 @@ body {
             grid-area: check-settings;
             display: grid;
             grid-template-columns: 0.2fr 1fr;
-            grid-template-rows: 0.2fr 1fr;
+            grid-template-rows: 30px 171.25px;
             grid-template-areas:
                 "settings-icons settings-banner"
                 "settings-icons settings-content";
@@ -450,15 +452,171 @@ body {
         }
         .check__phone {
             grid-area: check-phone;
-            // background-image: url(../images/hand.png);
-            background-image: url(../images/castle.png);
+            background-image: url(../images/hand.png);
             // background-size: 575px;
-            background-size: 415px;
+            background-size: 461px;
             background-repeat: no-repeat;
             background-position: center;
         }
     }
+    .screenshots {
+        background: url(../images/bg4.png) center no-repeat;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 201.25px 698.75px;
+        // grid-gap: 25px;
+        grid-template-areas:
+            "screenshots-banner"
+            "screenshots-gallery";
+        .screenshots__banner {
+            grid-area: screenshots-banner;
+            color: #3b434d;
+            font-size: 48px;
+            font-weight: 400;
+            justify-self: center;
+            align-self: center;
+        }
+        #i1,
+        #i2,
+        #i3,
+        #i4,
+        #i5 {
+            display: none;
+        }
+        .screenshots__slider {
+            margin: 0 auto;
+            margin-top: 20px;
+            position: relative;
+            width: 70%;
+            height: 0;
+            padding-bottom: 38%;
+            user-select: none;
+            background-color: #1c1c1c;
+            border: solid 10px #3b434d;
+            border-radius: 10px;
+            .slider_img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                img {
+                    width: inherit;
+                    height: inherit;
+                }
+                .prev,
+                .next {
+                    width: 12%;
+                    height: inherit;
+                    position: absolute;
+                    top: 0;
+                    background-color: rgba(88, 88, 88, 0.2);
+                    color: rgba(179, 100, 211, 0.9);
+                    z-index: 99;
+                    transition: 0.45s;
+                    cursor: pointer;
+                    text-align: center;
+                }
+                .next {
+                    right: 0;
+                }
+                .prev {
+                    left: 0;
+                }
+                .prev:hover,
+                .next:hover {
+                    transition: 0.3s;
+                    background-color: rgba(243, 243, 120, 0.8);
+                    color: rgb(179, 100, 211);
+                }
+                .arrow {
+                    position: absolute;
+                    font-size: 100pt;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            #nav_slider {
+                width: 100%;
+                bottom: 12%;
+                height: 11px;
+                position: absolute;
+                text-align: center;
+                z-index: 99;
+                cursor: default;
+                .dots {
+                    top: -5px;
+                    width: 18px;
+                    height: 18px;
+                    margin: 0 4px;
+                    position: relative;
+                    border-radius: 100%;
+                    display: inline-block;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    transition: 0.4s;
+                }
+                .dots:hover {
+                    cursor: pointer;
+                    background-color: rgba(179, 100, 211, 0.9);
+                    transition: 0.25s;
+                }
+            }
+            #i1:checked ~ #one,
+            #i2:checked ~ #two,
+            #i3:checked ~ #three,
+            #i4:checked ~ #four,
+            #i5:checked ~ #five {
+                z-index: 9;
+                animation: scroll 1s ease-in-out;
+            }
+            #i1:checked ~ #nav_slider > #dot1,
+            #i2:checked ~ #nav_slider > #dot2,
+            #i3:checked ~ #nav_slider > #dot3,
+            #i4:checked ~ #nav_slider > #dot4,
+            #i5:checked ~ #nav_slider > #dot5 {
+                background-color: rgba(179, 100, 211, 0.9);
+            }
+            // @keyframes scroll {
+            //     0% {
+            //         opacity: 0.4;
+            //     }
+            //     100% {
+            //         opacity: 1;
+            //     }
+            // }
+
+            // @media screen and (max-width: 685px) {
+            //     .container {
+            //         border: none;
+            //         width: 100%;
+            //         height: 0;
+            //         padding-bottom: 55%;
+            //     }
+            //     label span {
+            //         font-size: 50pt;
+            //     }
+            //     .prev,
+            //     .next {
+            //         width: 15%;
+            //     }
+            //     #nav_slide .dots {
+            //         width: 12px;
+            //         height: 12px;
+            //     }
+            // }
+            // @media screen and(min-width: 970px) {
+            //     .me {
+            //         display: none;
+            //     }
+            // }
+        }
+    }
 }
+// @media screen and (min-width: 1200px) {
+//     body {
+//         max-width: 1024px;
+//         margin: 10px auto;
+//     }
+// }
 
 // @font-face {
 //     font-family: 'Myriad Pro Regular';
