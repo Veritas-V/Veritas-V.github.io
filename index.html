@@ -12,7 +12,7 @@
 <body>
     <!-- меню -->
     <header class="header">
-        <div class="header__logo">
+        <div class="header__logo" name="top">
             <img src="./assets/images/logo.png" alt="Логотип Empires &amp; Puzzles: Эпичная головоломка"
                 title="Empires &amp; Puzzles&colon; Эпичная головоломка" class="header__logo_width">
         </div>
@@ -42,17 +42,24 @@
             <div class="empires__icons">
                 <!-- <div class="empires__appStore"></div>
                 <div class="empires__googlePlay"></div> -->
-                <a href="//play.google.com/store/apps/details?id=com.smallgiantgames.empires&hl=ru" target="_blank"><img
+                <a href="//apps.apple.com/us/app/empires-puzzles-epic-match-3/id1117841866" target="_blank"><img
                         src="./assets/images/AppStore.png" alt="Скачать для App Store" title="Download from App Store"
                         class="empires__appStore"></a>
                 <!-- поменять названия картинок -->
-                <a href="//apps.apple.com/us/app/empires-puzzles-epic-match-3/id1117841866" target="_blank"><img
+                <a href="//play.google.com/store/apps/details?id=com.smallgiantgames.empires&hl=ru" target="_blank"><img
                         src="./assets/images/GooglePlay.png" alt="Скачать для Google Play"
                         title="Download from Google Play" class="empires__googlePlay"></a>
             </div>
         </aside>
     </div>
 
+    <!-- кнопка -->
+    <!-- <div class="scrollup">
+         Иконка fa-chevron-up (Font Awesome) 
+        <i class="fa fa-chevron-up"></i>
+    </div> -->
+
+    <!-- контент -->
     <div class="content">
         <h1 class="content__banner">Amazing Featires</h1>
         <div class="content__main">Authoritatively grow cross-platform web services rather than an expanded array of
@@ -87,6 +94,8 @@
             </div>
         </div>
     </div>
+
+    <!-- чек -->
     <div class="check">
         <h1 class="check__banner">Check out our newapp</h1>
         <div class="check__time">
@@ -118,6 +127,8 @@
         </div>
         <div class="check__phone"></div>
     </div>
+
+    <!-- скрины -->
     <div class="screenshots">
         <h1 class="screenshots__banner">Screenshots</h1>
         <div class="screenshots__slider">
@@ -126,29 +137,35 @@
             <input type="radio" id="i3" name="images">
             <input type="radio" id="i4" name="images">
             <input type="radio" id="i5" name="images">
+            <input type="radio" id="i6" name="images">
             <div class="slider_img" id="one">
-                <img src="./assets/images/event-atlantis.jpg">
-                <label class="prev" for="i5"><span class="arrow">&#x2039;</span></label>
+                <img src="./assets/images/main.jpg">
+                <label class="prev" for="i6"><span class="arrow">&#x2039;</span></label>
                 <label class="next" for="i2"><span class="arrow">&#x203a;</span></label>
             </div>
             <div class="slider_img" id="two">
-                <img src="./assets/images/event-wonderlands.jpg">
+                <img src="./assets/images/gameplay_one.jpg">
                 <label class="prev" for="i1"><span class="arrow">&#x2039;</span></label>
                 <label class="next" for="i3"><span class="arrow">&#x203a;</span></label>
             </div>
             <div class="slider_img" id="three">
-                <img src="./assets/images/gameplay.jpg">
+                <img src="./assets/images/gameplay_two.jpg">
                 <label class="prev" for="i2"><span class="arrow">&#x2039;</span></label>
                 <label class="next" for="i4"><span class="arrow">&#x203a;</span></label>
             </div>
             <div class="slider_img" id="four">
-                <img src="http://wallpaperswide.com/download/big_hero_6_baymax-wallpaper-1152x720.jpg">
+                <img src="./assets/images/gameplay_three.jpg">
                 <label class="prev" for="i3"><span class="arrow">&#x2039;</span></label>
                 <label class="next" for="i5"><span class="arrow">&#x203a;</span></label>
             </div>
             <div class="slider_img" id="five">
-                <img src="http://www.wallpapereast.com/static/images/toys-wallpaper-hd-16339-17046-hd-wallpapers.jpg">
+                <img src="./assets/images/gameplay_four.jpg">
                 <label class="prev" for="i4"><span class="arrow">&#x2039;</span></label>
+                <label class="next" for="i6"><span class="arrow">&#x203a;</span></label>
+            </div>
+            <div class="slider_img" id="six">
+                <img src="./assets/images/gameplay_five.jpg">
+                <label class="prev" for="i5"><span class="arrow">&#x2039;</span></label>
                 <label class="next" for="i1"><span class="arrow">&#x203a;</span></label>
             </div>
             <div id="nav_slider">
@@ -157,10 +174,211 @@
                 <label for="i3" class="dots" id="dot3"></label>
                 <label for="i4" class="dots" id="dot4"></label>
                 <label for="i5" class="dots" id="dot5"></label>
+                <label for="i6" class="dots" id="dot6"></label>
             </div>
         </div>
     </div>
 
+    <!-- коменты -->
+    <div class="comments">
+        <input type="radio" id="com1" name="player" checked>
+        <input type="radio" id="com2" name="player">
+        <input type="radio" id="com3" name="player">
+        <div class="comments__quote quote__one" id="quote1">
+            <blockquote class="comments__user">
+                <img src="./assets/images/user_one.png" alt="Пользователь" title="Пользователь" class="comments__image">
+                <p class="user__quote">Collaboratively facilitate team driven products whereas cross functional customer
+                    service. Compellingly integrate corporate interfaces vis-a-vis cutting-edge convergence. Dynamically
+                    build prospective e-tailers whereas accurate innovation. Assertively architect.</p>
+                <p class="user__author">Lura MOORE</p>
+                <!-- <cite class="user__author">Автор цитаты</cite> -->
+                <label class="prev__author" for="com3"></label>
+                <label class="next__author" for="com2"></label>
+            </blockquote>
+        </div>
+        <div class="comments__quote quote__two" id="quote2">
+            <blockquote class="comments__user">
+                <img src="./assets/images/user_two.png" alt="Пользователь" title="Пользователь" class="comments__image">
+                <p class="user__quote">Rapidiously administrate distinctive manufactured products and ethical
+                    architectures. Objectively reintermediate prospective resources with cost effective deliverables.
+                    Credibly transform web-enabled data and superior processes. Completely.</p>
+                <p class="user__author">Joghn BARNNA</p>
+                <!-- <cite class="user__author">Автор цитаты</cite> -->
+                <label class="prev__author" for="com1"></label>
+                <label class="next__author" for="com3"></label>
+            </blockquote>
+        </div>
+        <div class="comments__quote quote__three" id="quote3">
+            <blockquote class="comments__user">
+                <img src="./assets/images/user_three.png" alt="Пользователь" title="Пользователь"
+                    class="comments__image">
+                <p class="user__quote">Objectively optimize seamless portals before highly efficient initiatives.
+                    Synergistically recaptiualize superior niches rather than scalable results. Quickly extend
+                    interoperable e-business for cooperative scenarios. Progressively facilitate frictionless.</p>
+                <p class="user__author">Charles DARWIN</p>
+                <!-- <cite class="user__author">Автор цитаты</cite> -->
+                <label class="prev__author" for="com2"></label>
+                <label class="next__author" for="com1"></label>
+            </blockquote>
+        </div>
+        <div id="nav_comments">
+            <label for="com1" class="buttons" id="buttons1"></label>
+            <label for="com2" class="buttons" id="buttons2"></label>
+            <label for="com3" class="buttons" id="buttons3"></label>
+        </div>
+    </div>
+
+    <!-- поддержка -->
+    <div class="support">
+        <h1 class="support__banner">Ask questins for Appliction Support</h1>
+        <div class="support__contact">info@olivia.com&nbsp;&nbsp;&nbsp;&nbsp;OR&nbsp;&nbsp;&nbsp;&nbsp;+01 125 485 968
+        </div>
+        <div class="support__user">
+            <div class="user__info_one">
+                <div class="info__name"><span>Micheal Rush</span><br>Founder & CEO</div>
+                <div class="info__bio">Continually coordinate leveragedfunctional value. Holisticly target stand-alone
+                    action items with ethical</div>
+                <div class="info__photo">
+                    <img src="./assets/images/info-photo-one.png" alt="Micheal Rush" title="Micheal Rush">
+                </div>
+                <div class="info__network">
+                    <!-- <img src="./assets/images/network.png" alt=""> -->
+                </div>
+            </div>
+            <div class="user__info_two">
+                <div class="info__name"><span>Paul McCartney</span><br>Customer Relation Officer</div>
+                <div class="info__bio">Continually coordinate leveragedfunctional value. Holisticly target stand-alone
+                    action items with ethical</div>
+                <div class="info__photo">
+                    <img src="./assets/images/info-photo-two.png" alt="Paul McCartney" title="Paul McCartney">
+                </div>
+                <div class="info__network"></div>
+            </div>
+            <div class="user__info_three">
+                <div class="info__name"><span>Louis Pasteur</span><br>Sales Executive</div>
+                <div class="info__bio">Continually coordinate leveragedfunctional value. Holisticly target stand-alone
+                    action items with ethical</div>
+                <div class="info__photo">
+                    <img src="./assets/images/info-photo-three.png" alt="Louis Pasteur" title="Louis Pasteur">
+                </div>
+                <div class="info__network"></div>
+            </div>
+            <div class="user__info_four">
+                <div class="info__name"> <span>John Lennon</span><br>Technical Executive</div>
+                <div class="info__bio">Continually coordinate leveragedfunctional value. Holisticly target stand-alone
+                    action items with ethical</div>
+                <div class="info__photo">
+                    <img src="./assets/images/info-photo-four.png" alt="John Lennon" title="John Lennon">
+                </div>
+                <div class="info__network"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- новостная лента -->
+    <div class="newsletter">
+        <h1 class="newsletter__banner">Newsletter</h1>
+        <div class="newsletter__main">Rapidiously repurpose compelling action items through equity invested process
+            improvements. Seamlessly mesh virtual manufactured products before next-generation growth strategies.
+            Assertively disintermediate pandemic e-services and enabled. Quickly brand extensible leadership for highly
+            efficient systems. Monotonectally strategize cross functional with sticky </div>
+        <form class="newsletter__mailing">
+            <input type="email" placeholder="&#128386; Enter your e-mail" required="">
+            <button type="submit">Подписаться!</button>
+        </form>
+    </div>
+
+    <!-- блог -->
+    <div class="blog">
+        <h1 class="blog__banner">Olivia Blog Post</h1>
+        <div class="blog__main">
+            <input type="radio" id="blog1" name="event" checked>
+            <input type="radio" id="blog2" name="event">
+            <input type="radio" id="blog3" name="event">
+            <div class="main__events events1" id="be1">
+                <div class="events__one">
+                    <h4 class="oneEv__banner">Extremely we promotion remainder</h4>
+                    <div class="oneEv__content">Comfort reached gay perhaps chamber his six detract besides add.
+                        Moonlight newspaper up he it enjoyment agreeable.</div>
+                    <div class="oneEv__link">http://srowar.com/lowerbacklink</div>
+                    <div class="oneEv__date"></div>
+                </div>
+                <label class="prev__event" for="blog3"></label>
+                <label class="next__event" for="blog2"></label>
+            </div>
+        </div>
+    </div>
+
+    <!-- get -->
+    <div class="get">
+        <h1 class="get__banner">Get in Touch</h1>
+        <div class="get__content">Efficiently scale state of the art e-tailers vis-a-vis business action items.
+            Objectively communicate multifunctional customer service through proactive e-business. Proactively
+            transition strategic leadership skills vis-a-vis state of the art quality vectors. </div>
+        <form class="get__form">
+            <input type="text" placeholder="First Name" required="" class="fName">
+            <input type="text" placeholder="Last Name" required="" class="lName">
+            <input type="email" placeholder="Email Address" required="" class="eAddress">
+            <input type="number" placeholder="Tel. Number" required="" class="tNumber">
+            <input type="text" placeholder="Comments" required="" class="comText">
+            <button type="submit" class="subm">SUBMIT YOUR MESSAGE</button>
+        </form>
+        <div class="get__network">
+            <div class="network__facebook">
+                <object type="image/svg+xml" data="./assets/images/facebook.svg" class="network__icons">
+                    <!-- <img src="./assets/images/three_in_a_row.svg"> -->
+                </object>
+            </div>
+            <div class="network__twitter">
+                <object type="image/svg+xml" data="./assets/images/twitter.svg" class="network__icons">
+                    <!-- <img src="./assets/images/three_in_a_row.svg"> -->
+                </object>
+            </div>
+            <div class="network__pinterest">
+                <object type="image/svg+xml" data="./assets/images/pinterest.svg" class="network__icons">
+                    <!-- <img src="./assets/images/three_in_a_row.svg"> -->
+                </object>
+            </div>
+            <div class="network__google">
+                <object type="image/svg+xml" data="./assets/images/google_plus.svg" class="network__icons">
+                    <!-- <img src="./assets/images/three_in_a_row.svg"> -->
+                </object>
+            </div>
+            <div class="network__dribbble">
+                <object type="image/svg+xml" data="./assets/images/dribbble.svg" class="network__icons">
+                    <!-- <img src="./assets/images/three_in_a_row.svg"> -->
+                </object>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__anchor">Фан-клуб игры <a href="#top">Empires & Puzzles</a> ©2020 | Обратная связь |
+            Перепечатка материала запрещена, подробнее тут — Авторские права</div>
+    </footer>
+    <!-- <script>
+        $(function () {
+            // при нажатии на кнопку scrollup
+            $('.scrollup').click(function () {
+                // переместиться в верхнюю часть страницы
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 1000);
+            })
+        })
+        // при прокрутке окна (window)
+        $(window).scroll(function () {
+            // если пользователь прокрутил страницу более чем на 200px
+            if ($(this).scrollTop() > 200) {
+                // то сделать кнопку scrollup видимой
+                $('.scrollup').fadeIn();
+            }
+            // иначе скрыть кнопку scrollup
+            else {
+                $('.scrollup').fadeOut();
+            }
+        });
+    </script> -->
 </body>
 
 </html>
