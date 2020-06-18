@@ -1805,6 +1805,10 @@ body .footer .footer__anchor a {
   color: #b364d3;
 }
 
+body .footer .footer__anchor a:hover {
+  color: red;
+}
+
 @media only screen and (min-width: 0px) and (max-width: 375px) {
   body {
     max-width: 375px;

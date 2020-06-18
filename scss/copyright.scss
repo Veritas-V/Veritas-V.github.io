@@ -1,0 +1,129 @@
+$padding: 0 200px;
+$darkColor: #3b434d;
+$lightColor: white;
+$purpleColor: rgb(179, 100, 211);
+$yellowColor: #fdf378;
+$regular: 400;
+$semibold: 600;
+$bold: 700;
+
+@font-face {
+    font-family: "Myriad Pro Regular";
+    src: url("MyriadPro-Regular.eot");
+    src: url("MyriadPro-Regular.eot?#iefix") format("embedded-opentype"), url("MyriadPro-Regular.woff") format("woff"),
+        url("MyriadPro-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+body {
+    margin: 0 auto;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: $regular;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 860px 100px;
+    grid-template-areas:
+        "header"
+        "copyright"
+        "footer";
+    .header {
+        grid-area: header;
+        background-color: $lightColor;
+        padding: $padding;
+        display: grid;
+        grid-template-columns: 0.3fr 0.3fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "header-logo . header-nav";
+        .header__logo_width {
+            grid-area: header-logo;
+            width: 200px;
+        }
+        .header__nav {
+            grid-area: header-nav;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            grid-template-rows: 1fr;
+            align-self: center;
+            justify-self: stretch;
+            font-family: "Myriad Pro Regular", sans-serif;
+            font-size: 18px;
+            font-weight: $regular;
+            text-transform: uppercase;
+            margin-right: 30px;
+            .nav__link {
+                color: $darkColor;
+                // margin-right: 30px;
+                padding: 10px 0;
+                text-align: center;
+                text-decoration: none;
+            }
+            .nav__link:hover {
+                color: $lightColor;
+                border-radius: 30px;
+                background-color: $purpleColor;
+                transition: color 0.1s linear, background-color 0.2s linear;
+            }
+        }
+    }
+    .copyright {
+        grid-area: copyright;
+        background: linear-gradient(to right, rgb(163, 65, 255), #9198e5);;
+        padding: $padding;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 660px;
+        .copyright__banner {
+            color: $lightColor;
+            font-size: 48px;
+            font-weight: $semibold;
+            // line-height: 24px;
+            justify-self: center;
+            align-self: center;
+            text-align: center;
+        }
+        .copyright__main {
+            color: $lightColor;
+            font-size: 18px;
+            font-weight: $regular;
+            line-height: 24px;
+            display: grid;
+            grid-template-rows: 220px 220px 220px;
+            justify-self: center;
+            align-self: center;
+            text-align: justify;
+            h4 {
+                color: $darkColor;
+            }
+            .copyright__main_two>p,
+            .copyright__main_three>p {
+                padding-left: 20px;
+            }
+        }
+    }
+    .footer {
+        grid-area: footer;
+        padding: $padding;
+        justify-self: center;
+        align-self: center;
+        color: $darkColor;
+        font-weight: $semibold;
+        .footer__anchor {
+            text-align: center;
+            a {
+                color: $purpleColor;
+            }
+            a:hover {
+                color: red;
+            }
+        }
+    }
+}
