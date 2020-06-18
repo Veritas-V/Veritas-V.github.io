@@ -158,23 +158,24 @@ body {
                 color: $lightColor;
                 font-size: 60px;
                 font-weight: $bold;
+                align-self: center;
                 text-align: left;
                 line-height: 72px;
             }
             .empires__description {
                 grid-area: description;
-                margin-top: 20px;
                 line-height: 30px;
                 color: $lightColor;
+                align-self: center;
                 text-align: left;
             }
             .empires__download {
                 grid-area: download;
-                margin-top: 20px;
                 font-size: 28px;
                 font-weight: $semibold;
                 line-height: 28px;
                 color: $lightColor;
+                align-self: center;
                 text-align: left;
             }
             .empires__icons {
@@ -186,7 +187,7 @@ body {
                     "appStore"
                     "googlePlay";
                 .empires__appStore {
-                    margin-top: 20px;
+                    margin-top: 15px;
                     width: 200px;
                     opacity: 0.75;
                     // background-image: url(../assets/images/store.png);
@@ -194,7 +195,7 @@ body {
                     // background-position: center;
                 }
                 .empires__googlePlay {
-                    margin-top: 20px;
+                    margin-top: 15px;
                     width: 200px;
                     opacity: 0.75;
                     transition: opacity 0.2s linear;
@@ -260,6 +261,7 @@ body {
             // line-height: 22px;
             justify-self: center;
             align-self: end;
+            text-align: center;
         }
         .content__main {
             grid-area: content-main;
@@ -269,6 +271,12 @@ body {
             justify-self: center;
             align-self: start;
             text-align: center;
+            p {
+                text-align: center;
+                font-weight: 600;
+                margin: 0;
+                padding: 0;
+            }
         }
         .content__advantage {
             grid-area: content-advantage;
@@ -370,6 +378,7 @@ body {
             line-height: 72px;
             justify-self: center;
             align-self: center;
+            text-align: center;
         }
         .check__time {
             grid-area: check-time;
@@ -472,7 +481,7 @@ body {
             grid-area: check-phone;
             background-image: url(../images/hand.png);
             // background-size: 575px;
-            background-size: 463px;
+            background-size: 461px;
             background-repeat: no-repeat;
             background-position: center;
         }
@@ -678,18 +687,18 @@ body {
         #com1:checked ~ #quote1,
         #com2:checked ~ #quote2,
         #com3:checked ~ #quote3 {
-            z-index: 9;
+            display: block;
             animation: scroll 1s ease-in-out;
         }
         #com1:checked ~ #nav_comments > #buttons1,
-        #com1:checked ~ #nav_comments > #buttons1,
-        #com1:checked ~ #nav_comments > #buttons1 {
+        #com2:checked ~ #nav_comments > #buttons2,
+        #com3:checked ~ #nav_comments > #buttons3 {
             background-color: rgba(255, 255, 255, 0.9);
         }
         .quote__one,
         .quote__two,
         .quote__three {
-            z-index: -1;
+            display: none;
         }
         .comments__quote {
             grid-area: comments-quote;
@@ -773,6 +782,16 @@ body {
             font-size: 27px;
             font-weight: $regular;
             line-height: 24px;
+            a {
+                text-decoration: none;
+                color: $darkColor;
+                padding: 0 10px;
+            }
+            a:hover {
+                color: $purpleColor;
+                font-size: 30px;
+                transition: font-size 0.3s linear;
+            }
         }
         .support__user {
             grid-area: support-user;
@@ -815,6 +834,7 @@ body {
                     border-bottom: 1.3px solid $darkColor;
                     justify-self: end;
                     align-self: end;
+                    text-align: right;
                     span {
                         font-size: 18px;
                         font-weight: $semibold;
@@ -830,6 +850,9 @@ body {
                     grid-area: info-photo;
                     justify-self: end;
                     align-self: center;
+                    img {
+                        width: 200px;
+                    }
                 }
                 .info__network {
                     grid-area: info-network;
@@ -851,6 +874,7 @@ body {
                 .info__name {
                     justify-self: start;
                     align-self: end;
+                    text-align: left;
                 }
                 .info__bio {
                     justify-self: start;
@@ -958,10 +982,54 @@ body {
         background: url(../images/bg7.png) center no-repeat;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 190px 700px;
+        grid-template-rows: 150px 750px;
         grid-template-areas:
             "blog-banner"
             "blog-main";
+        #blog1,
+        #blog2,
+        #blog3 {
+            display: none;
+        }
+        #nav_blog {
+            width: 100%;
+            bottom: 12%;
+            height: 11px;
+            text-align: center;
+            z-index: 99;
+            cursor: default;
+            .but {
+                bottom: -180px;
+                width: 14px;
+                height: 14px;
+                margin: 0 4px;
+                position: relative;
+                border-radius: 100%;
+                display: inline-block;
+                background-color: transparent;
+                border: 1.2px solid $purpleColor;
+                transition: 0.4s;
+            }
+            .but:hover {
+                cursor: pointer;
+                background-color: rgba(179, 100, 211, 0.9);
+                transition: 0.25s;
+            }
+        }
+        #blog1:checked ~ #be1,
+        #blog2:checked ~ #be2,
+        #blog3:checked ~ #be3 {
+            display: block;
+            animation: scroll 1s ease-in-out;
+        }
+        #blog1:checked ~ #nav_blog > #but1,
+        #blog2:checked ~ #nav_blog > #but2,
+        #blog3:checked ~ #nav_blog > #but3 {
+            background-color: $purpleColor;
+        }
+        .events {
+            display: none;
+        }
         .blog__banner {
             grid-area: blog-banner;
             color: $darkColor;
@@ -969,20 +1037,71 @@ body {
             font-weight: $semibold;
             // line-height: 24px;
             justify-self: center;
-            align-self: end;
+            align-self: center;
         }
         .blog__main {
             grid-area: blog-main;
             display: grid;
-            grid-template-columns: 0.5fr 0.5fr;
-            grid-template-rows: 228px 228px 228px;
-            grid-column-gap: 40px;
-            grid-template-areas:
-                "events1 events4"
-                "events2 events5"
-                "events3 events6";
-            .events1 {
-                grid-area: events1;
+            grid-template-columns: 1fr;
+            grid-template-rows: 500px;
+            input {
+                display: none;
+            }
+            .events {
+                .events__one {
+                    // padding: 0;
+                    // margin: 0;
+                    padding-inline-start: 0;
+                    list-style-type: none;
+                    display: grid;
+                    grid-template-columns: 0.5fr 0.5fr;
+                    grid-template-rows: 230px 230px 230px;
+                    .oneEv__content {
+                        .content26 {
+                            list-style-type: none;
+                            padding-inline-start: 0;
+                            display: grid;
+                            grid-template-columns: 0.5fr 1fr;
+                            grid-template-rows: 46.6px 106.6px 76.6px;
+                            grid-template-areas:
+                                "content26-image content26-banner"
+                                "content26-image content26-main"
+                                "content26-image content26-link";
+                            .content26__banner {
+                                grid-area: content26-banner;
+                                color: $darkColor;
+                                font-size: 18px;
+                                font-weight: $bold;
+                                align-self: center;
+                            }
+                            .content26__main {
+                                grid-area: content26-main;
+                                color: $darkColor;
+                                font-size: 14px;
+                                font-weight: $regular;
+                                line-height: 24px;
+                                align-self: center;
+                            }
+                            .content26__link {
+                                grid-area: content26-link;
+                                color: $darkColor;
+                                font-size: 14px;
+                                font-weight: $semibold;
+                                align-self: start;
+                            }
+                            .content26__image {
+                                grid-area: content26-image;
+                                text-align: right;
+                                padding-top: 15px;
+                                padding-right: 20px;
+                                img:hover {
+                                    transform: scale(1.2);
+                                    transition: transform 0.5s linear;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -1158,7 +1277,7 @@ body {
     body {
         max-width: 375px;
         margin: 10px auto;
-        grid-template-rows: 100px 560px 560px 505px 450px 450px 985px 530px 890px 745px 100px;
+        grid-template-rows: 100px 560px 560px 505px 600px 450px 985px 530px 890px 745px 100px;
         .header {
             grid-template-areas: "header-logo header-nav header-nav";
         }
@@ -1297,12 +1416,12 @@ body {
             }
         }
         .screenshots {
-            grid-template-rows: 101.25px 348.75px;
+            grid-template-rows: 101.25px 498.75px;
             .screenshots__banner {
                 align-self: center;
             }
             .screenshots__slider {
-                width: 70%;
+                width: 67%;
                 align-self: start;
             }
         }
