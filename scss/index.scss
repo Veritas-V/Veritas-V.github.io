@@ -1294,6 +1294,9 @@ body {
         max-width: 576px;
         margin: 10px auto;
         grid-template-rows: 100px 560px 560px 505px 600px 450px 985px 530px 890px 745px 100px;
+        .scrollup {
+            display: none;
+        }
         .header {
             padding: 0;
             grid-template-areas: "header-logo header-nav header-nav";
