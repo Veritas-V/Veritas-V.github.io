@@ -279,38 +279,6 @@ body .sub__header .sub__empires .empires__icons .empires__googlePlay:hover {
           transform: scale(1.2);
 }
 
-body .scrollup {
-  position: fixed;
-  /* фиксированная позиция */
-  color: #fff;
-  /* цвет текста */
-  background-color: #286090;
-  /* цвет заднего фона */
-  right: 20px;
-  /* расстояние от правого края */
-  bottom: 0px;
-  /* расстояние от нижнего края */
-  padding: 4px 10px;
-  /* отступы до содержимого блока */
-  font-size: 20px;
-  /* размер шрифта (иконки) */
-  border-top-left-radius: 4px;
-  /* скругление верхнего левого угла */
-  border-top-right-radius: 4px;
-  /* скругление верхнего правого угла */
-  cursor: pointer;
-  /* форма курсора */
-  display: none;
-  /* не отображать элемент */
-  text-align: center;
-  /*выравнивание содержимого элемента по центру */
-}
-
-body .scrollup:hover {
-  background-color: #000;
-  /* цвет заднего фона при наведении */
-}
-
 body .content {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
@@ -476,7 +444,8 @@ body .check {
   -ms-grid-column: 1;
   grid-area: check;
   padding: 0 200px;
-  background: url(../images/bg3.png) center no-repeat;
+  background: -webkit-gradient(linear, right top, left top, from(#a341ff), to(#9198e5));
+  background: linear-gradient(to left, #a341ff, #9198e5);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -675,7 +644,7 @@ body .check .check__phone {
   -ms-grid-column: 2;
   grid-area: check-phone;
   background-image: url(../images/hand.png);
-  background-size: 461px;
+  background-size: 463px;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -845,7 +814,8 @@ body .comments {
   -ms-grid-column: 1;
   grid-area: comments;
   padding: 0 200px;
-  background: url(../images/bg5.png) center no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(#a341ff), to(#9198e5));
+  background: linear-gradient(to right, #a341ff, #9198e5);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -1075,8 +1045,8 @@ body .support .support__user .user__info_three,
 body .support .support__user .user__info_four {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 0.7fr 0.3fr;
-      grid-template-columns: 0.7fr 0.3fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 94px 94px 94px;
       grid-template-rows: 94px 94px 94px;
   grid-gap: 10px;
@@ -1151,17 +1121,47 @@ body .support .support__user .user__info_four .info__network {
   -ms-grid-column: 2;
   grid-area: info-network;
       justify-self: end;
-  -ms-flex-item-align: center;
-      align-self: center;
-  width: 20px;
-  height: 20px;
-  font-family: untitled-font-1;
+  -ms-flex-item-align: start;
+      align-self: start;
+}
+
+body .support .support__user .user__info_one .info__network a:visited,
+body .support .support__user .user__info_two .info__network a:visited,
+body .support .support__user .user__info_three .info__network a:visited,
+body .support .support__user .user__info_four .info__network a:visited {
+  color: #3b434d;
+}
+
+body .support .support__user .user__info_one .info__network [class^="icon-"],
+body .support .support__user .user__info_one .info__network [class*=" icon-"],
+body .support .support__user .user__info_two .info__network [class^="icon-"],
+body .support .support__user .user__info_two .info__network [class*=" icon-"],
+body .support .support__user .user__info_three .info__network [class^="icon-"],
+body .support .support__user .user__info_three .info__network [class*=" icon-"],
+body .support .support__user .user__info_four .info__network [class^="icon-"],
+body .support .support__user .user__info_four .info__network [class*=" icon-"] {
+  height: 36px;
+  width: 36px;
+  text-align: center;
+  display: inline-block;
+  fill: currentColor;
+}
+
+body .support .support__user .user__info_one .info__network [class^="icon-"]:hover,
+body .support .support__user .user__info_one .info__network [class*=" icon-"]:hover,
+body .support .support__user .user__info_two .info__network [class^="icon-"]:hover,
+body .support .support__user .user__info_two .info__network [class*=" icon-"]:hover,
+body .support .support__user .user__info_three .info__network [class^="icon-"]:hover,
+body .support .support__user .user__info_three .info__network [class*=" icon-"]:hover,
+body .support .support__user .user__info_four .info__network [class^="icon-"]:hover,
+body .support .support__user .user__info_four .info__network [class*=" icon-"]:hover {
+  color: #b364d3;
 }
 
 body .support .support__user .user__info_two,
 body .support .support__user .user__info_four {
-  -ms-grid-columns: 0.3fr 0.7fr;
-      grid-template-columns: 0.3fr 0.7fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
@@ -1201,9 +1201,9 @@ body .support .support__user .user__info_two .info__network,
 body .support .support__user .user__info_four .info__network {
   -ms-grid-column-align: start;
       justify-self: start;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
 }
 
 body .newsletter {
@@ -1211,7 +1211,8 @@ body .newsletter {
   -ms-grid-column: 1;
   grid-area: newsletter;
   padding: 0 200px;
-  background: url(../images/bg6.png) center no-repeat;
+  background: -webkit-gradient(linear, right top, left top, from(#a341ff), to(#9198e5));
+  background: linear-gradient(to left, #a341ff, #9198e5);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -1529,7 +1530,8 @@ body .get {
   -ms-grid-column: 1;
   grid-area: get;
   padding: 0 200px;
-  background: url(../images/bg8.png) center no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(#a341ff), to(#9198e5));
+  background: linear-gradient(to right, #a341ff, #9198e5);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -1773,7 +1775,7 @@ body .get .get__network .network__icons {
 }
 
 body .get .get__network .network__icons:hover {
-  background-color: #b364d3;
+  background-color: #3b434d;
   border-radius: 50%;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
@@ -1809,17 +1811,41 @@ body .footer .footer__anchor a:hover {
   color: red;
 }
 
-@media only screen and (min-width: 0px) and (max-width: 375px) {
+body .scrollup {
+  position: fixed;
+  color: #b364d3;
+  background-color: #fdf378;
+  right: 20px;
+  bottom: 0px;
+  padding: 4px 10px;
+  font-size: 60px;
+  border: 1px solid #b364d3;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  cursor: pointer;
+  display: none;
+  text-align: center;
+}
+
+body .scrollup:hover {
+  color: #fdf378;
+  background-color: #b364d3;
+  border: 1px solid #fdf378;
+}
+
+@media only screen and (max-width: 576px) {
   body {
-    max-width: 375px;
+    max-width: 576px;
     margin: 10px auto;
     -ms-grid-rows: 100px 560px 560px 505px 600px 450px 985px 530px 890px 745px 100px;
         grid-template-rows: 100px 560px 560px 505px 600px 450px 985px 530px 890px 745px 100px;
   }
   body .header {
+    padding: 0;
         grid-template-areas: "header-logo header-nav header-nav";
   }
   body .sub__header {
+    padding: 0;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     -ms-grid-rows: 560px;
@@ -1862,6 +1888,7 @@ body .footer .footer__anchor a:hover {
     text-align: center;
   }
   body .content {
+    padding: 0;
     -ms-grid-rows: 100px 170px 290px;
         grid-template-rows: 100px 170px 290px;
   }
@@ -1897,6 +1924,7 @@ body .footer .footer__anchor a:hover {
     line-height: 24px;
   }
   body .check {
+    padding: 0;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     -ms-grid-rows: 126.25px 126.25px 126.25px 126.25px;
@@ -2003,14 +2031,23 @@ body .footer .footer__anchor a:hover {
         grid-template-rows: 450px;
     padding: 0 30px;
   }
+  body .newsletter {
+    padding: 0;
+  }
   body .newsletter .newsletter__main {
     padding: 0 30px;
+  }
+  body .get {
+    padding: 0;
   }
   body .get .get__content {
     padding: 0 30px;
   }
   body .get .get__form {
     padding: 0 30px;
+  }
+  body .footer {
+    padding: 0;
   }
   body .footer .footer__anchor {
     padding: 0 30px;

@@ -222,25 +222,6 @@ body {
             }
         }
     }
-
-    .scrollup {
-        position: fixed; /* фиксированная позиция */
-        color: #fff; /* цвет текста */
-        background-color: #286090; /* цвет заднего фона */
-        right: 20px; /* расстояние от правого края */
-        bottom: 0px; /* расстояние от нижнего края */
-        padding: 4px 10px; /* отступы до содержимого блока */
-        font-size: 20px; /* размер шрифта (иконки) */
-        border-top-left-radius: 4px; /* скругление верхнего левого угла */
-        border-top-right-radius: 4px; /* скругление верхнего правого угла */
-        cursor: pointer; /* форма курсора */
-        display: none; /* не отображать элемент */
-        text-align: center; /*выравнивание содержимого элемента по центру */
-    }
-    .scrollup:hover {
-        background-color: #000; /* цвет заднего фона при наведении */
-    }
-
     .content {
         grid-area: features;
         padding: $padding;
@@ -361,7 +342,7 @@ body {
     .check {
         grid-area: check;
         padding: $padding;
-        background: url(../images/bg3.png) center no-repeat;
+        background: linear-gradient(to left, rgb(163, 65, 255), #9198e5);;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 201.25px 201.25px 201.25px 201.25px;
@@ -481,7 +462,7 @@ body {
             grid-area: check-phone;
             background-image: url(../images/hand.png);
             // background-size: 575px;
-            background-size: 461px;
+            background-size: 463px;
             background-repeat: no-repeat;
             background-position: center;
         }
@@ -649,7 +630,7 @@ body {
     .comments {
         grid-area: comments;
         padding: $padding;
-        background: url(../images/bg5.png) center no-repeat;
+        background: linear-gradient(to right, rgb(163, 65, 255), #9198e5);
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 520px;
@@ -819,7 +800,7 @@ body {
             .user__info_three,
             .user__info_four {
                 display: grid;
-                grid-template-columns: 0.7fr 0.3fr;
+                grid-template-columns: 1fr 1fr;
                 grid-template-rows: 94px 94px 94px;
                 grid-gap: 10px;
                 justify-content: end;
@@ -857,15 +838,27 @@ body {
                 .info__network {
                     grid-area: info-network;
                     justify-self: end;
-                    align-self: center;
-                    width: 20px;
-                    height: 20px;
-                    font-family: untitled-font-1;
+                    align-self: start;
+                    a:visited {
+                        color: $darkColor;
+                    }
+                    [class^="icon-"],
+                    [class*=" icon-"] {
+                        height: 36px;
+                        width: 36px;
+                        text-align: center;
+                        display: inline-block;
+                        fill: currentColor;
+                    }
+                    [class^="icon-"]:hover,
+                    [class*=" icon-"]:hover {
+                        color: $purpleColor;
+                    }
                 }
             }
             .user__info_two,
             .user__info_four {
-                grid-template-columns: 0.3fr 0.7fr;
+                grid-template-columns: 1fr 1fr;
                 justify-content: start;
                 grid-template-areas:
                     "info-photo info-name"
@@ -887,7 +880,7 @@ body {
                 }
                 .info__network {
                     justify-self: start;
-                    align-self: center;
+                    align-self: start;
                 }
             }
         }
@@ -895,7 +888,7 @@ body {
     .newsletter {
         grid-area: newsletter;
         padding: $padding;
-        background: url(../images/bg6.png) center no-repeat;
+        background: linear-gradient(to left, rgb(163, 65, 255), #9198e5);
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 150px 230px 150px;
@@ -1109,7 +1102,7 @@ body {
     .get {
         grid-area: get;
         padding: $padding;
-        background: url(../images/bg8.png) center no-repeat;
+        background: linear-gradient(to right, rgb(163, 65, 255), #9198e5);
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 150px 150px 345px 100px;
@@ -1251,7 +1244,7 @@ body {
                 width: 30px;
             }
             .network__icons:hover {
-                background-color: $purpleColor;
+                background-color: $darkColor;
                 border-radius: 50%;
                 transform: scale(1.5);
                 transition: transform 0.3s linear, background-color 0.3s linear;
@@ -1275,16 +1268,38 @@ body {
             }
         }
     }
+    .scrollup {
+        position: fixed;
+        color: $purpleColor;
+        background-color: $yellowColor;
+        right: 20px;
+        bottom: 0px;
+        padding: 4px 10px;
+        font-size: 60px;
+        border: 1px solid $purpleColor;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        cursor: pointer;
+        display: none;
+        text-align: center;
+    }
+    .scrollup:hover {
+        color: $yellowColor;
+        background-color: $purpleColor;
+        border: 1px solid $yellowColor;
+    }
 }
-@media only screen and (min-width: 0px) and (max-width: 375px) {
+@media only screen and (max-width: 576px) {
     body {
-        max-width: 375px;
+        max-width: 576px;
         margin: 10px auto;
         grid-template-rows: 100px 560px 560px 505px 600px 450px 985px 530px 890px 745px 100px;
         .header {
+            padding: 0;
             grid-template-areas: "header-logo header-nav header-nav";
         }
         .sub__header {
+            padding: 0;
             grid-template-columns: 1fr;
             grid-template-rows: 560px;
             grid-gap: 0;
@@ -1319,6 +1334,7 @@ body {
             }
         }
         .content {
+            padding: 0;
             grid-template-rows: 100px 170px 290px;
             .content__main {
                 padding: 0 30px;
@@ -1358,6 +1374,7 @@ body {
             }
         }
         .check {
+            padding: 0;
             grid-template-columns: 1fr;
             grid-template-rows: 126.25px 126.25px 126.25px 126.25px;
             .check__time {
@@ -1433,11 +1450,13 @@ body {
             padding: 0 30px;
         }
         .newsletter {
+            padding: 0;
             .newsletter__main {
                 padding: 0 30px;
             }
         }
         .get {
+            padding: 0;
             .get__content {
                 padding: 0 30px;
             }
@@ -1446,6 +1465,7 @@ body {
             }
         }
         .footer {
+            padding: 0;
             .footer__anchor {
                 padding: 0 30px;
                 text-align: center;
