@@ -76,12 +76,16 @@ body {
     }
     .copyright {
         grid-area: copyright;
-        background: linear-gradient(to right, rgb(163, 65, 255), #9198e5);;
+        background: linear-gradient(to right, rgb(163, 65, 255), #9198e5);
         padding: $padding;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 150px 660px;
+        grid-template-areas:
+            "copyright-banner"
+            "copyright-main";
         .copyright__banner {
+            grid-area: copyright-banner;
             color: $lightColor;
             font-size: 48px;
             font-weight: $semibold;
@@ -91,21 +95,38 @@ body {
             text-align: center;
         }
         .copyright__main {
+            grid-area: copyright-main;
             color: $lightColor;
             font-size: 18px;
             font-weight: $regular;
             line-height: 24px;
             display: grid;
-            grid-template-rows: 220px 220px 220px;
+            grid-template-rows: 1fr 1fr 1fr;
             justify-self: center;
             align-self: center;
             text-align: justify;
-            h4 {
-                color: $darkColor;
+            grid-template-areas:
+                "copyright-main-one"
+                "copyright-main-two"
+                "copyright-main-three";
+            .copyright__main_one {
+                grid-area: copyright-main-one;
             }
-            .copyright__main_two>p,
-            .copyright__main_three>p {
-                padding-left: 20px;
+            .copyright__main_two {
+                grid-area: copyright-main-two;
+            }
+            .copyright__main_three {
+                grid-area: copyright-main-three;
+            }
+            .copyright__main_one,
+            .copyright__main_two,
+            .copyright__main_three {
+                h4 {
+                    color: $darkColor;
+                }
+                p {
+                    padding-left: 20px;
+                }
             }
         }
     }
@@ -124,6 +145,102 @@ body {
             a:hover {
                 color: red;
             }
+        }
+    }
+}
+@media only screen and (max-width: 576px) {
+    body {
+        max-width: 540px;
+        margin: 0 auto;
+        grid-template-rows: 200px 1050px 100px;
+        .header {
+            padding: 0;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+                " header-logo header-logo header-logo"
+                "header-nav header-nav header-nav";
+            .header__logo {
+                justify-self: center;
+                align-self: center;
+            }
+            .header__nav {
+                margin-right: 0;
+            }
+        }
+        .copyright {
+            padding: 0 30px;
+            grid-template-rows: 120px 900px;
+            .copyright__banner {
+                font-size: 42px;
+            }
+            .copyright__main {
+                font-size: 18px;
+                grid-template-rows: 1fr;
+            }
+        }
+        .footer {
+            padding: 0;
+        }
+    }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    body {
+        max-width: 720px;
+        margin: 0 auto;
+        grid-template-rows: 200px 1050px 100px;
+        .header {
+            padding: 0;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+                " header-logo header-logo header-logo"
+                "header-nav header-nav header-nav";
+            .header__logo {
+                justify-self: center;
+                align-self: center;
+            }
+            .header__nav {
+                margin-right: 0;
+            }
+        }
+        .copyright {
+            padding: 0 30px;
+            grid-template-rows: 120px 900px;
+            .copyright__banner {
+                font-size: 42px;
+            }
+            .copyright__main {
+                font-size: 18px;
+                grid-template-rows: 1fr;
+            }
+        }
+        .footer {
+            padding: 0;
+        }
+    }
+}
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+    body {
+        max-width: 960px;
+        margin: 0 auto;
+        .header {
+            padding: 0;
+            grid-template-columns: 0.3fr 0.3fr 1fr;
+            grid-template-areas: "header-logo . header-nav";
+            .header__nav {
+                margin-right: 0;
+            }
+        }
+        .copyright {
+            padding: 0 30px;
+            grid-template-rows: 150px 660px;
+            .copyright__main {
+                grid-template-rows: 1fr 1fr 1fr;
+            }
+        }
+        .footer {
+            padding: 0;
         }
     }
 }

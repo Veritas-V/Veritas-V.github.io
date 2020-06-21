@@ -274,11 +274,11 @@ body {
                 text-align: center;
                 .community__svg {
                     width: 133.6px;
-                    transition: background-color 0.5s linear, border-radius 0.5s linear;
                 }
                 .community__svg:hover {
                     background-color: $yellowColor;
                     border-radius: 25px;
+                    transition: background-color 0.5s linear, border-radius 0.5s linear;
                 }
                 .community__banner {
                     color: $darkColor;
@@ -297,12 +297,11 @@ body {
                 text-align: center;
                 .event__svg {
                     width: 133.6px;
-                    transition: background-color 0.5s linear;
-                    transition: border-radius 0.01s linear;
                 }
                 .event__svg:hover {
                     background-color: $yellowColor;
                     border-radius: 25px;
+                    transition: background-color 0.5s linear, border-radius 0.5s linear;
                 }
                 .event__banner {
                     color: $darkColor;
@@ -320,12 +319,11 @@ body {
                 text-align: center;
                 .three__svg {
                     width: 133.6px;
-                    transition: background-color 0.5s linear;
-                    transition: border-radius 0.01s linear;
                 }
                 .three__svg:hover {
                     background-color: $yellowColor;
                     border-radius: 25px;
+                    transition: background-color 0.5s linear, border-radius 0.5s linear;
                 }
                 .three__banner {
                     color: $darkColor;
@@ -840,6 +838,9 @@ body {
                     grid-area: info-network;
                     justify-self: end;
                     align-self: start;
+                    // a {
+                    //     overflow: hidden;
+                    // }
                     a:visited {
                         color: $darkColor;
                     }
@@ -1288,12 +1289,13 @@ body {
         color: $yellowColor;
         background-color: $purpleColor;
         border: 1px solid $yellowColor;
+        transition: color 0.2s linear, background-color 0.2s linear, border 0.2s linear;
     }
 }
 @media only screen and (max-width: 576px) {
     body {
         max-width: 540px;
-        margin: 10px auto;
+        margin: 0;
         // grid-template-columns: 100%;
         grid-template-rows: 200px 560px 600px 505px 450px 450px 535px 530px 890px 745px 100px;
         // .scrollup {

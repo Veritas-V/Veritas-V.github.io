@@ -353,13 +353,13 @@ body .content .content__advantage .advantage__community {
 
 body .content .content__advantage .advantage__community .community__svg {
   width: 133.6px;
-  -webkit-transition: background-color 0.5s linear, border-radius 0.5s linear;
-  transition: background-color 0.5s linear, border-radius 0.5s linear;
 }
 
 body .content .content__advantage .advantage__community .community__svg:hover {
   background-color: #fdf378;
   border-radius: 25px;
+  -webkit-transition: background-color 0.5s linear, border-radius 0.5s linear;
+  transition: background-color 0.5s linear, border-radius 0.5s linear;
 }
 
 body .content .content__advantage .advantage__community .community__banner {
@@ -384,15 +384,13 @@ body .content .content__advantage .advantage__event {
 
 body .content .content__advantage .advantage__event .event__svg {
   width: 133.6px;
-  -webkit-transition: background-color 0.5s linear;
-  transition: background-color 0.5s linear;
-  -webkit-transition: border-radius 0.01s linear;
-  transition: border-radius 0.01s linear;
 }
 
 body .content .content__advantage .advantage__event .event__svg:hover {
   background-color: #fdf378;
   border-radius: 25px;
+  -webkit-transition: background-color 0.5s linear, border-radius 0.5s linear;
+  transition: background-color 0.5s linear, border-radius 0.5s linear;
 }
 
 body .content .content__advantage .advantage__event .event__banner {
@@ -416,15 +414,13 @@ body .content .content__advantage .advantage__three {
 
 body .content .content__advantage .advantage__three .three__svg {
   width: 133.6px;
-  -webkit-transition: background-color 0.5s linear;
-  transition: background-color 0.5s linear;
-  -webkit-transition: border-radius 0.01s linear;
-  transition: border-radius 0.01s linear;
 }
 
 body .content .content__advantage .advantage__three .three__svg:hover {
   background-color: #fdf378;
   border-radius: 25px;
+  -webkit-transition: background-color 0.5s linear, border-radius 0.5s linear;
+  transition: background-color 0.5s linear, border-radius 0.5s linear;
 }
 
 body .content .content__advantage .advantage__three .three__banner {
@@ -1830,12 +1826,14 @@ body .scrollup:hover {
   color: #fdf378;
   background-color: #b364d3;
   border: 1px solid #fdf378;
+  -webkit-transition: color 0.2s linear, background-color 0.2s linear, border 0.2s linear;
+  transition: color 0.2s linear, background-color 0.2s linear, border 0.2s linear;
 }
 
 @media only screen and (max-width: 576px) {
   body {
     max-width: 540px;
-    margin: 10px auto;
+    margin: 0;
     -ms-grid-rows: 200px 560px 600px 505px 450px 450px 535px 530px 890px 745px 100px;
         grid-template-rows: 200px 560px 600px 505px 450px 450px 535px 530px 890px 745px 100px;
   }
