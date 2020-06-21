@@ -1310,6 +1310,9 @@ body {
                 justify-self: center;
                 align-self: center;
             }
+            .header__nav {
+                margin-right: 0;
+            }
         }
         .sub__header {
             padding: 0;
@@ -1627,6 +1630,9 @@ body {
         .header {
             padding: 0;
             grid-template-areas: "header-logo header-nav header-nav";
+            .header__nav {
+                margin-right: 0;
+            }
         }
         .sub__header {
             padding: 0;

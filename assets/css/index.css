@@ -1854,6 +1854,9 @@ body .scrollup:hover {
         -ms-grid-row-align: center;
         align-self: center;
   }
+  body .header .header__nav {
+    margin-right: 0;
+  }
   body .sub__header {
     padding: 0;
     -ms-grid-columns: 1fr;
@@ -2245,6 +2248,9 @@ body .scrollup:hover {
   body .header {
     padding: 0;
         grid-template-areas: "header-logo header-nav header-nav";
+  }
+  body .header .header__nav {
+    margin-right: 0;
   }
   body .sub__header {
     padding: 0;
