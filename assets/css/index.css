@@ -1803,7 +1803,7 @@ body .footer .footer__anchor a {
 }
 
 body .footer .footer__anchor a:hover {
-  color: red;
+  color: #fc8102;
 }
 
 body .scrollup {

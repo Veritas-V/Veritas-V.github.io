@@ -3,6 +3,7 @@ $darkColor: #3b434d;
 $lightColor: white;
 $purpleColor: rgb(179, 100, 211);
 $yellowColor: #fdf378;
+$orangeColor: #fc8102;
 $regular: 400;
 $semibold: 600;
 $bold: 700;
@@ -1266,7 +1267,7 @@ body {
                 color: $purpleColor;
             }
             a:hover {
-                color: red;
+                color: $orangeColor;
             }
         }
     }

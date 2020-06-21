@@ -24,8 +24,8 @@ body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 100px 860px 100px;
-      grid-template-rows: 100px 860px 100px;
+  -ms-grid-rows: 100px 1fr 100px;
+      grid-template-rows: 100px 1fr 100px;
       grid-template-areas: "header" "copyright" "footer";
 }
 
@@ -98,8 +98,8 @@ body .copyright {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 50px 130px 680px;
-      grid-template-rows: 50px 130px 680px;
+  -ms-grid-rows: 50px 130px 1fr;
+      grid-template-rows: 50px 130px 1fr;
       grid-template-areas: "breadcrumb" "copyright-banner" "copyright-main";
 }
 
@@ -199,7 +199,7 @@ body .copyright .breadcrumb .breadcrumb-item.active::before {
 body .copyright .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   display: inline-block;
   padding-right: 1px;
-  color: #6c757d;
+  color: #3b434d;
   content: "";
 }
 
@@ -228,8 +228,8 @@ body .copyright .copyright__main {
   line-height: 24px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 256px 256px 168px;
-      grid-template-rows: 256px 256px 168px;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
   -ms-grid-column-align: center;
       justify-self: center;
   -ms-grid-row-align: center;
@@ -256,13 +256,11 @@ body .copyright .copyright__main .copyright__main_three {
   grid-area: copyright-main-three;
 }
 
-body .copyright .copyright__main .copyright__main_one h4,
 body .copyright .copyright__main .copyright__main_two h4,
 body .copyright .copyright__main .copyright__main_three h4 {
   color: #3b434d;
 }
 
-body .copyright .copyright__main .copyright__main_one p,
 body .copyright .copyright__main .copyright__main_two p,
 body .copyright .copyright__main .copyright__main_three p {
   padding-left: 20px;
@@ -291,7 +289,7 @@ body .footer .footer__anchor a {
 }
 
 body .footer .footer__anchor a:hover {
-  color: red;
+  color: #fc8102;
 }
 
 @media only screen and (max-width: 576px) {
@@ -315,6 +313,7 @@ body .footer .footer__anchor a:hover {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    text-align: center;
   }
   body .header .header__nav {
     margin-right: 0;
@@ -341,8 +340,8 @@ body .footer .footer__anchor a:hover {
   body {
     max-width: 720px;
     margin: 0 auto;
-    -ms-grid-rows: 200px 1050px 100px;
-        grid-template-rows: 200px 1050px 100px;
+    -ms-grid-rows: 200px 1fr 100px;
+        grid-template-rows: 200px 1fr 100px;
   }
   body .header {
     padding: 0;
@@ -358,6 +357,7 @@ body .footer .footer__anchor a:hover {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    text-align: center;
   }
   body .header .header__nav {
     margin-right: 0;
@@ -396,12 +396,12 @@ body .footer .footer__anchor a:hover {
   }
   body .copyright {
     padding: 0 30px;
-    -ms-grid-rows: 50px 130px 680px;
-        grid-template-rows: 50px 130px 680px;
+    -ms-grid-rows: 50px 130px 1fr;
+        grid-template-rows: 50px 130px 1fr;
   }
   body .copyright .copyright__main {
-    -ms-grid-rows: 256px 256px 168px;
-        grid-template-rows: 256px 256px 168px;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
   }
   body .footer {
     padding: 0;

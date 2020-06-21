@@ -31,10 +31,12 @@ body {
     font-weight: $regular;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr 100px;
+    grid-template-rows: 100px 0.8fr 1fr 0.75fr 100px;
     grid-template-areas:
         "header"
-        "copyright"
+        "puzzles"
+        "featuresGame"
+        "essenceGame"
         "footer";
     .header {
         grid-area: header;
@@ -75,8 +77,8 @@ body {
             }
         }
     }
-    .copyright {
-        grid-area: copyright;
+    .puzzles {
+        grid-area: puzzles;
         background: linear-gradient(to right, rgb(163, 65, 255), #9198e5);
         padding: $padding;
         display: grid;
@@ -84,8 +86,8 @@ body {
         grid-template-rows: 50px 130px 1fr;
         grid-template-areas:
             "breadcrumb"
-            "copyright-banner"
-            "copyright-main";
+            "puzzles-banner"
+            "puzzles-main";
         .breadcrumb {
             list-style: none;
             display: flex;
@@ -160,15 +162,15 @@ body {
                 border-color: $lightColor;
                 border-left-color: transparent;
             }
-            .breadcrumb-item+.breadcrumb-item::before {
+            .breadcrumb-item + .breadcrumb-item::before {
                 display: inline-block;
                 padding-right: 1px;
-                color: $darkColor;
+                color: #6c757d;
                 content: "";
             }
         }
-        .copyright__banner {
-            grid-area: copyright-banner;
+        .puzzles__banner {
+            grid-area: puzzles-banner;
             color: $lightColor;
             font-size: 48px;
             font-weight: $semibold;
@@ -177,39 +179,110 @@ body {
             align-self: center;
             text-align: center;
         }
-        .copyright__main {
-            grid-area: copyright-main;
+        .puzzles__main {
+            grid-area: puzzles-main;
             color: $lightColor;
             font-size: 18px;
             font-weight: $regular;
             line-height: 24px;
             display: grid;
-            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
             justify-self: center;
             align-self: center;
             text-align: justify;
+        }
+    }
+    .featuresGame {
+        grid-area: featuresGame;
+        padding: $padding;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 130px 590px;
+        grid-template-areas:
+            "featuresGame-banner"
+            "featuresGame-main";
+        .featuresGame__banner {
+            grid-area: featuresGame-banner;
+            color: $darkColor;
+            font-size: 48px;
+            font-weight: $semibold;
+            // line-height: 24px;
+            justify-self: center;
+            align-self: center;
+            text-align: center;
+        }
+        .featuresGame__main {
+            grid-area: featuresGame-main;
+            color: $darkColor;
+            font-size: 18px;
+            font-weight: $regular;
+            line-height: 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 20px;
             grid-template-areas:
-                "copyright-main-one"
-                "copyright-main-two"
-                "copyright-main-three";
-            .copyright__main_one {
-                grid-area: copyright-main-one;
+                "main-one main-two"
+                "main-three main-four";
+            .main__one {
+                grid-area: main-one;
             }
-            .copyright__main_two {
-                grid-area: copyright-main-two;
+            .main__two {
+                grid-area: main-two;
             }
-            .copyright__main_three {
-                grid-area: copyright-main-three;
+            .main__three {
+                grid-area: main-three;
             }
-            .copyright__main_two,
-            .copyright__main_three {
-                h4 {
-                    color: $darkColor;
+            .main__four {
+                grid-area: main-four;
+            }
+            .main__one,
+            .main__two,
+            .main__three,
+            .main__four {
+                text-align: center;
+                grid-template-rows: 1fr 1fr 1fr;
+                [class^="icon-"],
+                [class*=" icon-"] {
+                    height: 32px;
+                    width: 32px;
+                    font-size: 38px;
+                    display: inline-block;
+                    fill: currentColor;
+                    color: #fc8102;
                 }
-                p {
-                    padding-left: 20px;
+                h3 {
+                    font-weight: $semibold;
                 }
             }
+        }
+    }
+    .essenceGame {
+        grid-area: essenceGame;
+        padding: $padding;
+        background: linear-gradient(to left, rgb(163, 65, 255), #9198e5);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 130px 350px;
+        grid-template-areas:
+            "essenceGame-banner"
+            "essenceGame-main";
+        .essenceGame__banner {
+            grid-area: essenceGame-banner;
+            color: $lightColor;
+            font-size: 48px;
+            font-weight: $semibold;
+            justify-self: center;
+            align-self: center;
+            text-align: center;
+        }
+        .essenceGame__main {
+            grid-area: essenceGame-main;
+            color: $lightColor;
+            font-size: 18px;
+            font-weight: $regular;
+            line-height: 24px;
+            text-align: justify;
         }
     }
     .footer {
@@ -229,18 +302,39 @@ body {
             }
         }
     }
+    .scrollup {
+        position: fixed;
+        color: $purpleColor;
+        background-color: $yellowColor;
+        right: 20px;
+        bottom: 0px;
+        padding: 4px 10px;
+        font-size: 60px;
+        border: 1px solid $purpleColor;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        cursor: pointer;
+        display: none;
+        text-align: center;
+    }
+    .scrollup:hover {
+        color: $yellowColor;
+        background-color: $purpleColor;
+        border: 1px solid $yellowColor;
+        transition: color 0.2s linear, background-color 0.2s linear, border 0.2s linear;
+    }
 }
 @media only screen and (max-width: 576px) {
     body {
         max-width: 540px;
         margin: 0 auto;
-        grid-template-rows: 200px 1fr 100px;
+        grid-template-rows: 200px 0.7fr 0.7fr 0.7fr 100px;
         .header {
             padding: 0;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr;
             grid-template-areas:
-                " header-logo header-logo header-logo"
+                "header-logo header-logo header-logo"
                 "header-nav header-nav header-nav";
             .header__logo {
                 justify-self: center;
@@ -251,16 +345,26 @@ body {
                 margin-right: 0;
             }
         }
-        .copyright {
+        .puzzles {
             padding: 0 30px;
             grid-template-rows: 50px 130px 1fr;
-            .copyright__banner {
+            .puzzles__banner {
                 font-size: 42px;
             }
-            .copyright__main {
+            .puzzles__main {
                 font-size: 18px;
-                grid-template-rows: 1fr 1fr 1fr;
             }
+        }
+        .featuresGame {
+            padding: 0 30px;
+            grid-template-rows: 130px 1fr;
+            .featuresGame__banner {
+                font-size: 42px;
+            }
+        }
+        .essenceGame {
+            padding: 0 30px;
+            grid-template-rows: 130px 1fr;
         }
         .footer {
             padding: 0;
@@ -271,7 +375,7 @@ body {
     body {
         max-width: 720px;
         margin: 0 auto;
-        grid-template-rows: 200px 1fr 100px;
+        grid-template-rows: 200px 0.7fr 0.7fr 0.7fr 100px;
         .header {
             padding: 0;
             grid-template-columns: 1fr;
@@ -288,16 +392,26 @@ body {
                 margin-right: 0;
             }
         }
-        .copyright {
+        .puzzles {
             padding: 0 30px;
             grid-template-rows: 50px 130px 1fr;
-            .copyright__banner {
+            .puzzles__banner {
                 font-size: 42px;
             }
-            .copyright__main {
+            .puzzles__main {
                 font-size: 18px;
-                grid-template-rows: 1fr 1fr 1fr;
             }
+        }
+        .featuresGame {
+            padding: 0 30px;
+            grid-template-rows: 130px 1fr;
+            .featuresGame__banner {
+                font-size: 42px;
+            }
+        }
+        .essenceGame {
+            padding: 0 30px;
+            grid-template-rows: 130px 1fr;
         }
         .footer {
             padding: 0;
@@ -308,6 +422,7 @@ body {
     body {
         max-width: 960px;
         margin: 0 auto;
+        grid-template-rows: 100px 0.7fr 0.7fr 0.7fr 100px;
         .header {
             padding: 0;
             grid-template-columns: 0.3fr 0.3fr 1fr;
@@ -316,12 +431,26 @@ body {
                 margin-right: 0;
             }
         }
-        .copyright {
+        .puzzles {
             padding: 0 30px;
             grid-template-rows: 50px 130px 1fr;
-            .copyright__main {
-                grid-template-rows: 1fr 1fr 1fr;
+            .puzzles__banner {
+                font-size: 42px;
             }
+            .puzzles__main {
+                font-size: 18px;
+            }
+        }
+        .featuresGame {
+            padding: 0 30px;
+            grid-template-rows: 130px 1fr;
+            .featuresGame__banner {
+                font-size: 42px;
+            }
+        }
+        .essenceGame {
+            padding: 0 30px;
+            grid-template-rows: 130px 1fr;
         }
         .footer {
             padding: 0;

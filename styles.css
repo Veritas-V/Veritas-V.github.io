@@ -83,3 +83,24 @@
 .icon-android:before {
   content: "\71";
 }
+.icon-globe:before {
+  content: "\6a";
+}
+.icon-cogs:before {
+  content: "\6b";
+}
+.icon-clock-o:before {
+  content: "\72";
+}
+.icon-users:before {
+  content: "\73";
+}
+.icon-circle-o-notch:before {
+  content: "\74";
+}
+.icon-gamepad:before {
+  content: "\75";
+}
+.icon-plane:before {
+  content: "\76";
+}
