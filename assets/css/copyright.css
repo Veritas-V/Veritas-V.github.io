@@ -305,7 +305,7 @@ body .footer .footer__anchor a:hover {
         grid-template-columns: 1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-areas: " header-logo header-logo header-logo" "header-nav header-nav header-nav";
+        grid-template-areas: "header-logo header-logo header-logo" "header-nav header-nav header-nav";
   }
   body .header .header__logo {
     -ms-grid-column-align: center;
@@ -353,7 +353,7 @@ body .footer .footer__anchor a:hover {
         grid-template-columns: 1fr;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-areas: " header-logo header-logo header-logo" "header-nav header-nav header-nav";
+        grid-template-areas: "header-logo header-logo header-logo" "header-nav header-nav header-nav";
   }
   body .header .header__logo {
     -ms-grid-column-align: center;

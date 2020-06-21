@@ -391,7 +391,7 @@ body {
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr;
             grid-template-areas:
-                " header-logo header-logo header-logo"
+                "header-logo header-logo header-logo"
                 "header-nav header-nav header-nav";
             .header__logo {
                 justify-self: center;
