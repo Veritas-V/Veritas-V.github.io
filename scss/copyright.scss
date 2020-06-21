@@ -160,7 +160,7 @@ body {
                 border-color: $lightColor;
                 border-left-color: transparent;
             }
-            .breadcrumb-item+.breadcrumb-item::before {
+            .breadcrumb-item + .breadcrumb-item::before {
                 display: inline-block;
                 padding-right: 1px;
                 color: $darkColor;
@@ -249,6 +249,8 @@ body {
             }
             .header__nav {
                 margin-right: 0;
+                grid-template-columns: auto auto auto;
+                grid-template-rows: 1fr 1fr;
             }
         }
         .copyright {
@@ -259,7 +261,7 @@ body {
             }
             .copyright__main {
                 font-size: 18px;
-                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 0.6fr;
             }
         }
         .footer {
@@ -296,7 +298,7 @@ body {
             }
             .copyright__main {
                 font-size: 18px;
-                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 0.7fr;
             }
         }
         .footer {
