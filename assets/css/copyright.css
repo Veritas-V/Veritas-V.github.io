@@ -393,7 +393,7 @@ body .footer .footer__anchor a:hover {
     padding: 0;
     -ms-grid-columns: 0.3fr 0.3fr 1fr;
         grid-template-columns: 0.3fr 0.3fr 1fr;
-        grid-template-areas: "header-logo . header-nav";
+        grid-template-areas: "header-logo header-nav header-nav";
   }
   body .header .header__nav {
     margin-right: 0;

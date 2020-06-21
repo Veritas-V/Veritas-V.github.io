@@ -313,7 +313,7 @@ body {
         .header {
             padding: 0;
             grid-template-columns: 0.3fr 0.3fr 1fr;
-            grid-template-areas: "header-logo . header-nav";
+            grid-template-areas: "header-logo header-nav header-nav";
             .header__nav {
                 margin-right: 0;
             }
