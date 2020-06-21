@@ -462,8 +462,8 @@ body {
         .check__phone {
             grid-area: check-phone;
             background-image: url(../images/hand.png);
-            // background-size: 575px;
-            background-size: 463px;
+            // background-size: 463px;
+            background-size: 30.1vw;
             background-repeat: no-repeat;
             background-position: center;
         }
@@ -1986,6 +1986,21 @@ body {
         }
         .check {
             padding: 0;
+            .check__time {
+                .time__banner {
+                    font-size: 16.5px;
+                }
+            }
+            .check__space {
+                .space__banner {
+                    font-size: 16.5px;
+                }
+            }
+            .check__settings {
+                .settings__banner {
+                    font-size: 16.5px;
+                }
+            }
         }
         .screenshots {
             grid-template-rows: 101.25px 498.75px;

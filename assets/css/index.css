@@ -643,7 +643,7 @@ body .check .check__phone {
   -ms-grid-column: 2;
   grid-area: check-phone;
   background-image: url(../images/hand.png);
-  background-size: 463px;
+  background-size: 30.1vw;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -2692,6 +2692,15 @@ body .scrollup:hover {
   }
   body .check {
     padding: 0;
+  }
+  body .check .check__time .time__banner {
+    font-size: 16.5px;
+  }
+  body .check .check__space .space__banner {
+    font-size: 16.5px;
+  }
+  body .check .check__settings .settings__banner {
+    font-size: 16.5px;
   }
   body .screenshots {
     -ms-grid-rows: 101.25px 498.75px;
