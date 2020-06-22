@@ -56,6 +56,9 @@ body {
             grid-area: header-logo;
             width: 200px;
         }
+        .nav {
+            display: none;
+        }
         .header__nav {
             grid-area: header-nav;
             display: grid;
@@ -464,7 +467,7 @@ body {
             // background-size: 463px;
             background-size: 30.1vw;
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: center bottom;
         }
     }
     .screenshots {
@@ -839,9 +842,6 @@ body {
                     grid-area: info-network;
                     justify-self: end;
                     align-self: start;
-                    // a {
-                    //     overflow: hidden;
-                    // }
                     a:visited {
                         color: $darkColor;
                     }
@@ -1101,7 +1101,6 @@ body {
             }
         }
     }
-
     .get {
         grid-area: get;
         padding: $padding;
@@ -1298,7 +1297,7 @@ body {
         max-width: 540px;
         margin: 0;
         // grid-template-columns: 100%;
-        grid-template-rows: 200px 560px 600px 505px 450px 450px 535px 530px 890px 745px 100px;
+        grid-template-rows: 150px 560px 600px 505px 450px 450px 535px 530px 890px 745px 100px;
         // .scrollup {
         //     display: none;
         // }
@@ -1314,7 +1313,34 @@ body {
                 align-self: center;
             }
             .header__nav {
-                margin-right: 0;
+                display: none;
+                // margin-right: 0;
+                // grid-template-columns: auto auto auto;
+                // grid-template-rows: 1fr 1fr;
+            }
+            .nav {
+                grid-area: header-nav;
+                display: block;
+                justify-self: center;
+                align-self: center;
+                .nav-item {
+                    a {
+                        color: $darkColor;
+                    }
+                    .nav-link {
+                        text-align: center;
+                    }
+                    .dropdown-menu {
+                        color: $darkColor;
+                        .dropdown-item {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            .nav-pills .show>.nav-link {
+                background-color: $orangeColor;
+                color: $darkColor;
             }
         }
         .sub__header {

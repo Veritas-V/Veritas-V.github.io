@@ -4,8 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link href="https://file.myfontastic.com/qFuR7QRN8mBwDrLuaQomXg/icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="./styles.css">
     <title>Empires &amp; Puzzles&colon; Эпичная головоломка</title>
@@ -20,12 +29,24 @@
         </div>
         <nav class="header__nav">
             <a class="nav__link" href="about-the-game.html">об игре</a>
-            <a class="nav__link" href="#">новости</a>
+            <a class="nav__link" href="news.html">новости</a>
             <a class="nav__link" href="#">поддержка</a>
             <a class="nav__link" href="#">faq</a>
             <a class="nav__link" href="#">wiki</a>
             <a class="nav__link" href="#">блог</a>
         </nav>
+        <ul class="nav nav-pills">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Меню</a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="about-the-game.html">Об игре</a>
+                <a class="dropdown-item" href="news.html">Новости</a>
+                <a class="dropdown-item" href="#">Поддержка</a>
+                <a class="dropdown-item" href="#">FAQ</a>
+                <a class="dropdown-item" href="#">Wiki</a>
+                <a class="dropdown-item" href="#">Блог</a>
+            </li>
+          </ul>
     </header>
 
     <!-- скачать -->
@@ -119,7 +140,7 @@
             <div class="settings__content">Благодаря большой аудитории, которая пополняется с каждым днем, разработчики
                 еженедельно дорабатывают свою игру для улучшения качества и баланса игроков.</div>
         </div>
-        <div class="check__phone"></div>
+        <div class="check__phone" style="background-position: center bottom;"></div>
     </div>
 
     <!-- скрины -->
@@ -237,16 +258,16 @@
                     <img src="./assets/images/timo.png" alt="Timo Soininen" title="Timo Soininen">
                 </div>
                 <div class="info__network">
-                    <a href="https://www.facebook.com/timo.soininen" target="_blank">
+                    <a href="https://www.facebook.com/timo.soininen" target="_blank" style="text-decoration: none;">
                         <div class="icon-facebook"></div>
                     </a>
-                    <a href="https://twitter.com/headgiant" target="_blank">
+                    <a href="https://twitter.com/headgiant" target="_blank" style="text-decoration: none;">
                         <div class="icon-twitter"></div>
                     </a>
-                    <a href="https://id.pinterest.com/timoso/boards/" target="_blank">
+                    <a href="https://id.pinterest.com/timoso/boards/" target="_blank" style="text-decoration: none;">
                         <div class="icon-pinterest"></div>
                     </a>
-                    <a href="https://fi.linkedin.com/in/timosoininen" target="_blank">
+                    <a href="https://fi.linkedin.com/in/timosoininen" target="_blank" style="text-decoration: none;">
                         <div class="icon-linkedin"></div>
                     </a>
                     <a href="#" target="_blank">
@@ -262,17 +283,17 @@
                     <img src="./assets/images/otto.png" alt="Otto Nieminen" title="Otto Nieminen">
                 </div>
                 <div class="info__network">
-                    <a href="#" target="_blank">
+                    <a href="#" target="_blank" style="text-decoration: none;">
                         <div class="icon-facebook"></div>
                     </a>
-                    <a href="#" target="_blank">
-                        <div class="icon-twitter"></div>
+                    <a href="#" target="_blank" style="text-decoration: none;">
+                        <div class="icon-twitter" style="text-decoration: none;"></div>
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="#" target="_blank" style="text-decoration: none;">
                         <div class="icon-pinterest"></div>
                     </a>
                     <a href="https://fi.linkedin.com/in/ottonieminen/ru-ru?trk=people-guest_people_search-card"
-                        target="_blank">
+                        target="_blank" style="text-decoration: none;">
                         <div class="icon-linkedin"></div>
                     </a>
                     <a href="#" target="_blank">
@@ -287,19 +308,19 @@
                     <img src="./assets/images/markus.png" alt="Markus Halttunen" title="Markus Halttunen">
                 </div>
                 <div class="info__network">
-                    <a href="#" target="_blank">
+                    <a href="#" target="_blank" style="text-decoration: none;">
                         <div class="icon-facebook"></div>
                     </a>
-                    <a href="https://twitter.com/mhalttu" target="_blank">
+                    <a href="https://twitter.com/mhalttu" target="_blank" style="text-decoration: none;">
                         <div class="icon-twitter"></div>
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="#" target="_blank" style="text-decoration: none;">
                         <div class="icon-pinterest"></div>
                     </a>
-                    <a href="https://fi.linkedin.com/in/mhalttu" target="_blank">
+                    <a href="https://fi.linkedin.com/in/mhalttu" target="_blank" style="text-decoration: none;">
                         <div class="icon-linkedin"></div>
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="#" target="_blank" style="text-decoration: none;">
                         <div class="icon-google-plus"></div>
                     </a>
                 </div>
@@ -311,25 +332,24 @@
                     <img src="./assets/images/jose.png" alt="Jose Saarniniemi" title="Jose Saarniniemi">
                 </div>
                 <div class="info__network">
-                    <a href="#" target="_blank">
+                    <a href="#" target="_blank" style="text-decoration: none;">
                         <div class="icon-facebook"></div>
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="#" target="_blank" style="text-decoration: none;">
                         <div class="icon-twitter"></div>
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="#" target="_blank" style="text-decoration: none;">
                         <div class="icon-pinterest"></div>
                     </a>
-                    <a href="https://in.linkedin.com/in/jose-saarniniemi-40795024/ru-ru" target="_blank">
+                    <a href="https://in.linkedin.com/in/jose-saarniniemi-40795024/ru-ru" target="_blank" style="text-decoration: none;">
                         <div class="icon-linkedin"></div>
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="#" target="_blank" style="text-decoration: none;">
                         <div class="icon-google-plus"></div>
                     </a>
                 </div>
             </div>
         </div>
-
     </div>
 
     <!-- новостная лента -->
@@ -587,7 +607,7 @@
     <footer class="footer">
         <div class="footer__anchor">Фан-сайт игры <a href="index.html">Empires & Puzzles</a>
             ©2020&ensp;&#8402;&ensp;Обратная связь&ensp;&#8402;&ensp;Перепечатка материала запрещена, подробнее тут
-            &ndash; <a href="copyright.html">Авторские права</div>
+            &ndash; <a href="copyright.html">Авторские права</a></div>
     </footer>
 
     <!-- кнопка -->
@@ -597,6 +617,14 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
     <script>
         $(function () {
             // при нажатии на кнопку scrollup

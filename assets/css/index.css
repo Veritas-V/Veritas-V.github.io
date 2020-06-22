@@ -52,6 +52,10 @@ body .header .header__logo_width {
   width: 200px;
 }
 
+body .header .nav {
+  display: none;
+}
+
 body .header .header__nav {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
@@ -641,7 +645,7 @@ body .check .check__phone {
   background-image: url(../images/hand.png);
   background-size: 30.1vw;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center bottom;
 }
 
 body .screenshots {
@@ -1834,8 +1838,8 @@ body .scrollup:hover {
   body {
     max-width: 540px;
     margin: 0;
-    -ms-grid-rows: 200px 560px 600px 505px 450px 450px 535px 530px 890px 745px 100px;
-        grid-template-rows: 200px 560px 600px 505px 450px 450px 535px 530px 890px 745px 100px;
+    -ms-grid-rows: 150px 560px 600px 505px 450px 450px 535px 530px 890px 745px 100px;
+        grid-template-rows: 150px 560px 600px 505px 450px 450px 535px 530px 890px 745px 100px;
   }
   body .header {
     padding: 0;
@@ -1853,7 +1857,35 @@ body .scrollup:hover {
         align-self: center;
   }
   body .header .header__nav {
-    margin-right: 0;
+    display: none;
+  }
+  body .header .nav {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: header-nav;
+    display: block;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  body .header .nav .nav-item a {
+    color: #3b434d;
+  }
+  body .header .nav .nav-item .nav-link {
+    text-align: center;
+  }
+  body .header .nav .nav-item .dropdown-menu {
+    color: #3b434d;
+  }
+  body .header .nav .nav-item .dropdown-menu .dropdown-item {
+    text-align: center;
+  }
+  body .header .nav-pills .show > .nav-link {
+    background-color: #fc8102;
+    color: #3b434d;
   }
   body .sub__header {
     padding: 0;

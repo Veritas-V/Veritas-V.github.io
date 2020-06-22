@@ -24,9 +24,9 @@ body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 100px 0.8fr 1fr 0.75fr 100px;
-      grid-template-rows: 100px 0.8fr 1fr 0.75fr 100px;
-      grid-template-areas: "header" "puzzles" "featuresGame" "essenceGame" "footer";
+  -ms-grid-rows: 100px 2fr 100px;
+      grid-template-rows: 100px 2fr 100px;
+      grid-template-areas: "header" "news" "footer";
 }
 
 body .header {
@@ -91,12 +91,12 @@ body .header .header__nav .nav__link:hover {
   transition: color 0.1s linear, background-color 0.2s linear;
 }
 
-body .puzzles {
+body .news {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: puzzles;
-  background: -webkit-gradient(linear, left top, right top, from(#a341ff), to(#9198e5));
-  background: linear-gradient(to right, #a341ff, #9198e5);
+  grid-area: news;
+  background: -webkit-gradient(linear, right top, left top, from(#a341ff), to(#9198e5));
+  background: linear-gradient(to left, #a341ff, #9198e5);
   padding: 0 200px;
   display: -ms-grid;
   display: grid;
@@ -104,10 +104,10 @@ body .puzzles {
       grid-template-columns: 1fr;
   -ms-grid-rows: 50px 130px 1fr;
       grid-template-rows: 50px 130px 1fr;
-      grid-template-areas: "breadcrumb" "puzzles-banner" "puzzles-main";
+      grid-template-areas: "breadcrumb" "news-banner" "news-main";
 }
 
-body .puzzles .breadcrumb {
+body .news .breadcrumb {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -116,8 +116,8 @@ body .puzzles .breadcrumb {
   background-color: transparent;
 }
 
-body .puzzles .breadcrumb a,
-body .puzzles .breadcrumb .active {
+body .news .breadcrumb a,
+body .news .breadcrumb .active {
   color: #3b434d;
   display: block;
   background: #fdf378;
@@ -134,28 +134,28 @@ body .puzzles .breadcrumb .active {
           user-select: none;
 }
 
-body .puzzles .breadcrumb .breadcrumb-item:first-child > a {
+body .news .breadcrumb .breadcrumb-item:first-child > a {
   padding-left: 15px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
 
-body .puzzles .breadcrumb .breadcrumb-item:last-child > a,
-body .puzzles .breadcrumb .breadcrumb-item.active {
+body .news .breadcrumb .breadcrumb-item:last-child > a,
+body .news .breadcrumb .breadcrumb-item.active {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   margin-right: 0;
   padding-right: 15px;
 }
 
-body .puzzles .breadcrumb .breadcrumb-item:first-child > a::before,
-body .puzzles .breadcrumb .breadcrumb-item:last-child > a::after {
+body .news .breadcrumb .breadcrumb-item:first-child > a::before,
+body .news .breadcrumb .breadcrumb-item:last-child > a::after {
   border: none;
 }
 
-body .puzzles .breadcrumb .breadcrumb-item > a::before,
-body .puzzles .breadcrumb .breadcrumb-item > a::after,
-body .puzzles .breadcrumb .breadcrumb-item.active::before {
+body .news .breadcrumb .breadcrumb-item > a::before,
+body .news .breadcrumb .breadcrumb-item > a::after,
+body .news .breadcrumb .breadcrumb-item.active::before {
   content: "";
   position: absolute;
   top: 0;
@@ -165,52 +165,52 @@ body .puzzles .breadcrumb .breadcrumb-item.active::before {
   height: 0;
 }
 
-body .puzzles .breadcrumb .breadcrumb-item > a::before,
-body .puzzles .breadcrumb .breadcrumb-item.active::before {
+body .news .breadcrumb .breadcrumb-item > a::before,
+body .news .breadcrumb .breadcrumb-item.active::before {
   left: -20px;
   border-left-color: transparent;
 }
 
-body .puzzles .breadcrumb .breadcrumb-item > a::after {
+body .news .breadcrumb .breadcrumb-item > a::after {
   left: 100%;
   border-color: transparent;
   border-left-color: #fdf378;
 }
 
-body .puzzles .breadcrumb .breadcrumb-item > a:hover {
+body .news .breadcrumb .breadcrumb-item > a:hover {
   background-color: #fc8102;
 }
 
-body .puzzles .breadcrumb .breadcrumb-item > a:hover::before {
+body .news .breadcrumb .breadcrumb-item > a:hover::before {
   border-color: #fc8102;
   border-left-color: transparent;
 }
 
-body .puzzles .breadcrumb .breadcrumb-item > a:hover::after {
+body .news .breadcrumb .breadcrumb-item > a:hover::after {
   border-left-color: #fc8102;
 }
 
-body .puzzles .breadcrumb .breadcrumb-item.active {
+body .news .breadcrumb .breadcrumb-item.active {
   color: #fc8102;
   background-color: white;
 }
 
-body .puzzles .breadcrumb .breadcrumb-item.active::before {
+body .news .breadcrumb .breadcrumb-item.active::before {
   border-color: white;
   border-left-color: transparent;
 }
 
-body .puzzles .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+body .news .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   display: inline-block;
   padding-right: 1px;
   color: #6c757d;
   content: "";
 }
 
-body .puzzles .puzzles__banner {
+body .news .news__banner {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: puzzles-banner;
+  grid-area: news-banner;
   color: white;
   font-size: 48px;
   font-weight: 600;
@@ -222,10 +222,16 @@ body .puzzles .puzzles__banner {
   text-align: center;
 }
 
-body .puzzles .puzzles__main {
+body .news .news__main {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  grid-area: puzzles-main;
+  grid-area: news-main;
+  padding-bottom: 30px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  grid-gap: 20px;
   color: white;
   font-size: 18px;
   font-weight: 400;
@@ -241,153 +247,13 @@ body .puzzles .puzzles__main {
   text-align: justify;
 }
 
-body .featuresGame {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: featuresGame;
-  padding: 0 200px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 130px 590px;
-      grid-template-rows: 130px 590px;
-      grid-template-areas: "featuresGame-banner" "featuresGame-main";
-}
-
-body .featuresGame .featuresGame__banner {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: featuresGame-banner;
+body .news .news__main .card .card-body h5,
+body .news .news__main .card .card-body p {
   color: #3b434d;
-  font-size: 48px;
-  font-weight: 600;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  text-align: center;
-}
-
-body .featuresGame .featuresGame__main {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: featuresGame-main;
-  color: #3b434d;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 24px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-  grid-gap: 20px;
-      grid-template-areas: "main-one main-two" "main-three main-four";
-}
-
-body .featuresGame .featuresGame__main .main__one {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: main-one;
-}
-
-body .featuresGame .featuresGame__main .main__two {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: main-two;
-}
-
-body .featuresGame .featuresGame__main .main__three {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: main-three;
-}
-
-body .featuresGame .featuresGame__main .main__four {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: main-four;
-}
-
-body .featuresGame .featuresGame__main .main__one,
-body .featuresGame .featuresGame__main .main__two,
-body .featuresGame .featuresGame__main .main__three,
-body .featuresGame .featuresGame__main .main__four {
-  text-align: center;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-}
-
-body .featuresGame .featuresGame__main .main__one [class^="icon-"],
-body .featuresGame .featuresGame__main .main__one [class*=" icon-"],
-body .featuresGame .featuresGame__main .main__two [class^="icon-"],
-body .featuresGame .featuresGame__main .main__two [class*=" icon-"],
-body .featuresGame .featuresGame__main .main__three [class^="icon-"],
-body .featuresGame .featuresGame__main .main__three [class*=" icon-"],
-body .featuresGame .featuresGame__main .main__four [class^="icon-"],
-body .featuresGame .featuresGame__main .main__four [class*=" icon-"] {
-  height: 32px;
-  width: 32px;
-  font-size: 38px;
-  display: inline-block;
-  fill: currentColor;
-  color: #fc8102;
-}
-
-body .featuresGame .featuresGame__main .main__one h3,
-body .featuresGame .featuresGame__main .main__two h3,
-body .featuresGame .featuresGame__main .main__three h3,
-body .featuresGame .featuresGame__main .main__four h3 {
-  font-weight: 600;
-}
-
-body .essenceGame {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: essenceGame;
-  padding: 0 200px;
-  background: -webkit-gradient(linear, right top, left top, from(#a341ff), to(#9198e5));
-  background: linear-gradient(to left, #a341ff, #9198e5);
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 130px 350px;
-      grid-template-rows: 130px 350px;
-      grid-template-areas: "essenceGame-banner" "essenceGame-main";
-}
-
-body .essenceGame .essenceGame__banner {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: essenceGame-banner;
-  color: white;
-  font-size: 48px;
-  font-weight: 600;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  text-align: center;
-}
-
-body .essenceGame .essenceGame__main {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: essenceGame-main;
-  color: white;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: justify;
 }
 
 body .footer {
-  -ms-grid-row: 5;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: footer;
   padding: 0 200px;
@@ -440,8 +306,8 @@ body .scrollup:hover {
   body {
     max-width: 540px;
     margin: 0 auto;
-    -ms-grid-rows: 150px 0.7fr 0.7fr 0.7fr 100px;
-        grid-template-rows: 150px 0.7fr 0.7fr 0.7fr 100px;
+    -ms-grid-rows: 150px 1fr 100px;
+        grid-template-rows: 150px 1fr 100px;
   }
   body .header {
     padding: 0;
@@ -490,40 +356,17 @@ body .scrollup:hover {
     background-color: #fc8102;
     color: #3b434d;
   }
-  body .puzzles {
+  body .news {
     padding: 0 30px;
-    -ms-grid-rows: 50px 130px 1fr;
-        grid-template-rows: 50px 130px 1fr;
   }
-  body .puzzles .puzzles__banner {
+  body .news .news__banner {
     font-size: 42px;
   }
-  body .puzzles .puzzles__main {
-    font-size: 18px;
-  }
-  body .featuresGame {
-    padding: 0 30px;
-    -ms-grid-rows: 130px 1fr;
-        grid-template-rows: 130px 1fr;
-  }
-  body .featuresGame .featuresGame__banner {
-    font-size: 42px;
-  }
-  body .featuresGame .featuresGame__main {
+  body .news .news__main {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 0.5fr 0.6fr 1fr;
-        grid-template-rows: 1fr 0.5fr 0.6fr 1fr;
-    grid-gap: 0;
-        grid-template-areas: "main-one" "main-two" "main-three" "main-four";
-  }
-  body .essenceGame {
-    padding: 0 30px;
-    -ms-grid-rows: 130px 1fr;
-        grid-template-rows: 130px 1fr;
-  }
-  body .essenceGame .essenceGame__banner {
-    font-size: 42px;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
   body .footer {
     padding: 0 30px;
@@ -534,8 +377,8 @@ body .scrollup:hover {
   body {
     max-width: 720px;
     margin: 0 auto;
-    -ms-grid-rows: 200px 0.7fr 0.7fr 0.7fr 100px;
-        grid-template-rows: 200px 0.7fr 0.7fr 0.7fr 100px;
+    -ms-grid-rows: 200px 1fr 100px;
+        grid-template-rows: 200px 1fr 100px;
   }
   body .header {
     padding: 0;
@@ -560,32 +403,17 @@ body .scrollup:hover {
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
   }
-  body .puzzles {
-    padding: 0 30px;
-    -ms-grid-rows: 50px 130px 1fr;
-        grid-template-rows: 50px 130px 1fr;
+  body .news {
+    padding: 0;
   }
-  body .puzzles .puzzles__banner {
+  body .news .news__banner {
     font-size: 42px;
   }
-  body .puzzles .puzzles__main {
-    font-size: 18px;
-  }
-  body .featuresGame {
-    padding: 0 30px;
-    -ms-grid-rows: 130px 1fr;
-        grid-template-rows: 130px 1fr;
-  }
-  body .featuresGame .featuresGame__banner {
-    font-size: 42px;
-  }
-  body .essenceGame {
-    padding: 0 30px;
-    -ms-grid-rows: 130px 1fr;
-        grid-template-rows: 130px 1fr;
-  }
-  body .essenceGame .essenceGame__banner {
-    font-size: 42px;
+  body .news .news__main {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
   }
   body .footer {
     padding: 0 30px;
@@ -596,8 +424,8 @@ body .scrollup:hover {
   body {
     max-width: 960px;
     margin: 0 auto;
-    -ms-grid-rows: 100px 0.7fr 0.7fr 0.7fr 100px;
-        grid-template-rows: 100px 0.7fr 0.7fr 0.7fr 100px;
+    -ms-grid-rows: 100px 1fr 100px;
+        grid-template-rows: 100px 1fr 100px;
   }
   body .header {
     padding: 0;
@@ -608,32 +436,20 @@ body .scrollup:hover {
   body .header .header__nav {
     margin-right: 0;
   }
-  body .puzzles {
+  body .news {
     padding: 0 30px;
-    -ms-grid-rows: 50px 130px 1fr;
-        grid-template-rows: 50px 130px 1fr;
   }
-  body .puzzles .puzzles__banner {
+  body .news .news__banner {
     font-size: 42px;
   }
-  body .puzzles .puzzles__main {
-    font-size: 18px;
-  }
-  body .featuresGame {
-    padding: 0 30px;
-    -ms-grid-rows: 130px 1fr;
-        grid-template-rows: 130px 1fr;
-  }
-  body .featuresGame .featuresGame__banner {
-    font-size: 42px;
-  }
-  body .essenceGame {
-    padding: 0 30px;
-    -ms-grid-rows: 130px 1fr;
-        grid-template-rows: 130px 1fr;
+  body .news .news__main {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
   }
   body .footer {
     padding: 0 30px;
   }
 }
-/*# sourceMappingURL=about-the-game.css.map */
+/*# sourceMappingURL=news.css.map */

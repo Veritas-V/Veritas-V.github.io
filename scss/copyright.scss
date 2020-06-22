@@ -48,6 +48,9 @@ body {
             grid-area: header-logo;
             width: 200px;
         }
+        .nav {
+            display: none;
+        }
         .header__nav {
             grid-area: header-nav;
             display: grid;
@@ -234,7 +237,7 @@ body {
     body {
         max-width: 540px;
         margin: 0 auto;
-        grid-template-rows: 200px 1fr 100px;
+        grid-template-rows: 150px 1fr 100px;
         .header {
             padding: 0;
             grid-template-columns: 1fr;
@@ -248,9 +251,34 @@ body {
                 text-align: center;
             }
             .header__nav {
-                margin-right: 0;
-                grid-template-columns: auto auto auto;
-                grid-template-rows: 1fr 1fr;
+                display: none;
+                // margin-right: 0;
+                // grid-template-columns: auto auto auto;
+                // grid-template-rows: 1fr 1fr;
+            }
+            .nav {
+                grid-area: header-nav;
+                display: block;
+                justify-self: center;
+                align-self: center;
+                .nav-item {
+                    a {
+                        color: $darkColor;
+                    }
+                    .nav-link {
+                        text-align: center;
+                    }
+                    .dropdown-menu {
+                        color: $darkColor;
+                        .dropdown-item {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            .nav-pills .show>.nav-link {
+                background-color: $orangeColor;
+                color: $darkColor;
             }
         }
         .copyright {
@@ -265,7 +293,7 @@ body {
             }
         }
         .footer {
-            padding: 0;
+            padding: 0 30px;
         }
     }
 }
@@ -302,7 +330,7 @@ body {
             }
         }
         .footer {
-            padding: 0;
+            padding: 0 30px;
         }
     }
 }
@@ -326,7 +354,7 @@ body {
             }
         }
         .footer {
-            padding: 0;
+            padding: 0 30px;
         }
     }
 }

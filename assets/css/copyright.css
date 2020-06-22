@@ -51,6 +51,10 @@ body .header .header__logo_width {
   width: 200px;
 }
 
+body .header .nav {
+  display: none;
+}
+
 body .header .header__nav {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
@@ -296,8 +300,8 @@ body .footer .footer__anchor a:hover {
   body {
     max-width: 540px;
     margin: 0 auto;
-    -ms-grid-rows: 200px 1fr 100px;
-        grid-template-rows: 200px 1fr 100px;
+    -ms-grid-rows: 150px 1fr 100px;
+        grid-template-rows: 150px 1fr 100px;
   }
   body .header {
     padding: 0;
@@ -316,11 +320,35 @@ body .footer .footer__anchor a:hover {
     text-align: center;
   }
   body .header .header__nav {
-    margin-right: 0;
-    -ms-grid-columns: auto auto auto;
-        grid-template-columns: auto auto auto;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+    display: none;
+  }
+  body .header .nav {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: header-nav;
+    display: block;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  body .header .nav .nav-item a {
+    color: #3b434d;
+  }
+  body .header .nav .nav-item .nav-link {
+    text-align: center;
+  }
+  body .header .nav .nav-item .dropdown-menu {
+    color: #3b434d;
+  }
+  body .header .nav .nav-item .dropdown-menu .dropdown-item {
+    text-align: center;
+  }
+  body .header .nav-pills .show > .nav-link {
+    background-color: #fc8102;
+    color: #3b434d;
   }
   body .copyright {
     padding: 0 30px;
@@ -336,7 +364,7 @@ body .footer .footer__anchor a:hover {
         grid-template-rows: 1fr 1fr 0.6fr;
   }
   body .footer {
-    padding: 0;
+    padding: 0 30px;
   }
 }
 
@@ -380,7 +408,7 @@ body .footer .footer__anchor a:hover {
         grid-template-rows: 1fr 1fr 0.7fr;
   }
   body .footer {
-    padding: 0;
+    padding: 0 30px;
   }
 }
 
@@ -408,7 +436,7 @@ body .footer .footer__anchor a:hover {
         grid-template-rows: 1fr 1fr 1fr;
   }
   body .footer {
-    padding: 0;
+    padding: 0 30px;
   }
 }
 /*# sourceMappingURL=copyright.css.map */
