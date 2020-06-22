@@ -1335,6 +1335,11 @@ body {
                         .dropdown-item {
                             text-align: center;
                         }
+                        .dropdown-item.active, .dropdown-item:active {
+                            color: $darkColor;
+                            text-decoration: none;
+                            background-color: $orangeColor;
+                        }
                     }
                 }
             }

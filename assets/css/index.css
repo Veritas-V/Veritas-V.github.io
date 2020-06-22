@@ -1883,6 +1883,11 @@ body .scrollup:hover {
   body .header .nav .nav-item .dropdown-menu .dropdown-item {
     text-align: center;
   }
+  body .header .nav .nav-item .dropdown-menu .dropdown-item.active, body .header .nav .nav-item .dropdown-menu .dropdown-item:active {
+    color: #3b434d;
+    text-decoration: none;
+    background-color: #fc8102;
+  }
   body .header .nav-pills .show > .nav-link {
     background-color: #fc8102;
     color: #3b434d;
