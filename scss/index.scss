@@ -1335,7 +1335,8 @@ body {
                         .dropdown-item {
                             text-align: center;
                         }
-                        .dropdown-item.active, .dropdown-item:active {
+                        .dropdown-item.active,
+                        .dropdown-item:active {
                             color: $darkColor;
                             text-decoration: none;
                             background-color: $orangeColor;
@@ -1343,7 +1344,7 @@ body {
                     }
                 }
             }
-            .nav-pills .show>.nav-link {
+            .nav-pills .show > .nav-link {
                 background-color: $orangeColor;
                 color: $darkColor;
             }
@@ -1645,7 +1646,7 @@ body {
         max-width: 720px;
         margin: 0;
         // grid-template-columns: 100%;
-        grid-template-rows: 100px 560px 600px 505px 450px 450px 890px 530px 535px 745px 100px;
+        grid-template-rows: 200px 560px 600px 505px 450px 450px 890px 530px 745px 100px;
         grid-template-areas:
             "header"
             "sub-header"
@@ -1658,14 +1659,22 @@ body {
             "support"
             "get"
             "footer";
-        // .scrollup {
-        //     display: none;
-        // }
         .header {
             padding: 0;
-            grid-template-areas: "header-logo header-nav header-nav";
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+                "header-logo header-logo header-logo"
+                "header-nav header-nav header-nav";
+            .header__logo {
+                justify-self: center;
+                align-self: center;
+                text-align: center;
+            }
             .header__nav {
                 margin-right: 0;
+                grid-template-columns: auto auto auto;
+                grid-template-rows: 1fr 1fr;
             }
         }
         .sub__header {
@@ -2094,8 +2103,3 @@ body {
         }
     }
 }
-// @media only screen and (min-width: 1200px) {
-//     body {
-//         min-width: 1140px;
-//     }
-// }
