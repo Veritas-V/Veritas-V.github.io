@@ -31,12 +31,10 @@ body {
     font-weight: $regular;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 2fr 100px;
+    grid-template-rows: 100px 1fr 100px;
     grid-template-areas:
         "header"
-        "faq"
-        // "featuresGame"
-        // "essenceGame"
+        "wiki-talents"
         "footer";
     .header {
         grid-area: header;
@@ -80,18 +78,44 @@ body {
             }
         }
     }
-    .faq {
-        grid-area: faq;
+    .wiki__talents {
+        grid-area: wiki-talents;
         background: linear-gradient(to left, rgb(163, 65, 255), #9198e5);
+        color: $lightColor;
         padding: $padding;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 50px 80px 50px 1fr;
+        grid-template-rows: 50px 130px 1fr;
+        padding-bottom: 20px;
         grid-template-areas:
             "breadcrumb"
-            "faq-banner"
-            "faq-h4"
-            "faq-main";
+            "wiki-talents-banner"
+            "wiki-main";
+        p {
+            font-size: 24px;
+            font-weight: $semibold;
+            a {
+                color: $yellowColor;
+            }
+        }
+        .under__table {
+            color: $darkColor;
+            font-size: 20px;
+            font-weight: $regular;
+            padding-bottom: 20px;
+            border-bottom: 1px solid $darkColor;
+        }
+        ol {
+            padding-bottom: 20px;
+            color: $yellowColor;
+        }
+        li {
+            font-size: 18px;
+            font-weight: $regular;
+            a {
+                color: $darkColor;
+            }
+        }
         .breadcrumb {
             list-style: none;
             display: flex;
@@ -173,8 +197,8 @@ body {
                 content: "";
             }
         }
-        .faq__banner {
-            grid-area: faq-banner;
+        .wiki__talents_banner {
+            grid-area: wiki-talents-banner;
             color: $lightColor;
             font-size: 48px;
             font-weight: $semibold;
@@ -182,42 +206,11 @@ body {
             align-self: center;
             text-align: center;
         }
-        .faq__h4 {
-            grid-area: faq-h4;
-            color: $darkColor;
-            font-size: 28px;
-            font-weight: $semibold;
-            justify-self: center;
-            align-self: center;
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #212529;
             text-align: center;
-        }
-        .faq__main {
-            grid-area: faq-main;
-            padding-bottom: 30px;
-            color: $lightColor;
-            font-size: 18px;
-            font-weight: $regular;
-            line-height: 24px;
-            .list-group-item.active {
-                z-index: 2;
-                color: $darkColor;
-                background-color: $orangeColor;
-                border-color: $orangeColor;
-            }
-            *,
-            *::before,
-            *::after {
-                box-sizing: border-box; // 1
-            }
-            .padding {
-                padding-left: 30px;
-            }
-            p {
-                position: relative;
-                a {
-                    color: $darkColor;
-                }
-            }
         }
     }
     .footer {
@@ -278,9 +271,6 @@ body {
             }
             .header__nav {
                 display: none;
-                // margin-right: 0;
-                // grid-template-columns: auto auto auto;
-                // grid-template-rows: 1fr 1fr;
             }
             .nav {
                 grid-area: header-nav;
@@ -313,9 +303,11 @@ body {
                 color: $darkColor;
             }
         }
-        .faq {
-            grid-template-rows: 50px 0.01fr 0.01fr 1fr;
-            .faq__banner {
+        .wiki__talents {
+            display: block;
+            padding: 0 30px;
+            grid-template-rows: 50px 0.01fr 1fr;
+            .wiki__talents_banner {
                 font-size: 42px;
             }
         }
@@ -347,9 +339,10 @@ body {
                 grid-template-rows: 1fr 1fr;
             }
         }
-        .faq {
-            grid-template-rows: 50px 0.01fr 0.01fr 1fr;
-            .faq__banner {
+        .wiki__talents {
+            padding: 0 30px;
+            grid-template-rows: 50px 130px 1fr;
+            .wiki__talents_banner {
                 font-size: 42px;
             }
         }
@@ -369,6 +362,13 @@ body {
             grid-template-areas: "header-logo header-nav header-nav";
             .header__nav {
                 margin-right: 0;
+            }
+        }
+        .wiki__talents {
+            padding: 0 30px;
+            grid-template-rows: 50px 130px 1fr;
+            .wiki__talents_banner {
+                font-size: 42px;
             }
         }
         .footer {

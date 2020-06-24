@@ -26,7 +26,7 @@ body {
       grid-template-columns: 1fr;
   -ms-grid-rows: 100px 1fr 100px;
       grid-template-rows: 100px 1fr 100px;
-      grid-template-areas: "header" "copyright" "footer";
+      grid-template-areas: "header" "wiki-talents" "footer";
 }
 
 body .header {
@@ -91,10 +91,10 @@ body .header .header__nav .nav__link:hover {
   transition: color 0.1s linear, background-color 0.2s linear;
 }
 
-body .copyright {
+body .wiki__talents {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: copyright;
+  grid-area: wiki-talents;
   background: -webkit-gradient(linear, left top, right top, from(#a341ff), to(#9198e5));
   background: linear-gradient(to right, #a341ff, #9198e5);
   padding: 0 150px;
@@ -104,10 +104,11 @@ body .copyright {
       grid-template-columns: 1fr;
   -ms-grid-rows: 50px 130px 1fr;
       grid-template-rows: 50px 130px 1fr;
-      grid-template-areas: "breadcrumb" "copyright-banner" "copyright-main";
+  padding-bottom: 20px;
+      grid-template-areas: "breadcrumb" "wiki-talents-banner" "wiki-main";
 }
 
-body .copyright .breadcrumb {
+body .wiki__talents .breadcrumb {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -116,8 +117,8 @@ body .copyright .breadcrumb {
   background-color: transparent;
 }
 
-body .copyright .breadcrumb a,
-body .copyright .breadcrumb .active {
+body .wiki__talents .breadcrumb a,
+body .wiki__talents .breadcrumb .active {
   color: #3b434d;
   display: block;
   background: #fdf378;
@@ -134,28 +135,28 @@ body .copyright .breadcrumb .active {
           user-select: none;
 }
 
-body .copyright .breadcrumb .breadcrumb-item:first-child > a {
+body .wiki__talents .breadcrumb .breadcrumb-item:first-child > a {
   padding-left: 15px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
 
-body .copyright .breadcrumb .breadcrumb-item:last-child > a,
-body .copyright .breadcrumb .breadcrumb-item.active {
+body .wiki__talents .breadcrumb .breadcrumb-item:last-child > a,
+body .wiki__talents .breadcrumb .breadcrumb-item.active {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   margin-right: 0;
   padding-right: 15px;
 }
 
-body .copyright .breadcrumb .breadcrumb-item:first-child > a::before,
-body .copyright .breadcrumb .breadcrumb-item:last-child > a::after {
+body .wiki__talents .breadcrumb .breadcrumb-item:first-child > a::before,
+body .wiki__talents .breadcrumb .breadcrumb-item:last-child > a::after {
   border: none;
 }
 
-body .copyright .breadcrumb .breadcrumb-item > a::before,
-body .copyright .breadcrumb .breadcrumb-item > a::after,
-body .copyright .breadcrumb .breadcrumb-item.active::before {
+body .wiki__talents .breadcrumb .breadcrumb-item > a::before,
+body .wiki__talents .breadcrumb .breadcrumb-item > a::after,
+body .wiki__talents .breadcrumb .breadcrumb-item.active::before {
   content: "";
   position: absolute;
   top: 0;
@@ -165,52 +166,52 @@ body .copyright .breadcrumb .breadcrumb-item.active::before {
   height: 0;
 }
 
-body .copyright .breadcrumb .breadcrumb-item > a::before,
-body .copyright .breadcrumb .breadcrumb-item.active::before {
+body .wiki__talents .breadcrumb .breadcrumb-item > a::before,
+body .wiki__talents .breadcrumb .breadcrumb-item.active::before {
   left: -20px;
   border-left-color: transparent;
 }
 
-body .copyright .breadcrumb .breadcrumb-item > a::after {
+body .wiki__talents .breadcrumb .breadcrumb-item > a::after {
   left: 100%;
   border-color: transparent;
   border-left-color: #fdf378;
 }
 
-body .copyright .breadcrumb .breadcrumb-item > a:hover {
+body .wiki__talents .breadcrumb .breadcrumb-item > a:hover {
   background-color: #fc8102;
 }
 
-body .copyright .breadcrumb .breadcrumb-item > a:hover::before {
+body .wiki__talents .breadcrumb .breadcrumb-item > a:hover::before {
   border-color: #fc8102;
   border-left-color: transparent;
 }
 
-body .copyright .breadcrumb .breadcrumb-item > a:hover::after {
+body .wiki__talents .breadcrumb .breadcrumb-item > a:hover::after {
   border-left-color: #fc8102;
 }
 
-body .copyright .breadcrumb .breadcrumb-item.active {
+body .wiki__talents .breadcrumb .breadcrumb-item.active {
   color: #fc8102;
   background-color: white;
 }
 
-body .copyright .breadcrumb .breadcrumb-item.active::before {
+body .wiki__talents .breadcrumb .breadcrumb-item.active::before {
   border-color: white;
   border-left-color: transparent;
 }
 
-body .copyright .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+body .wiki__talents .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   display: inline-block;
   padding-right: 1px;
-  color: #3b434d;
+  color: #6c757d;
   content: "";
 }
 
-body .copyright .copyright__banner {
+body .wiki__talents .wiki__talents_banner {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: copyright-banner;
+  grid-area: wiki-talents-banner;
   color: white;
   font-size: 48px;
   font-weight: 600;
@@ -222,52 +223,11 @@ body .copyright .copyright__banner {
   text-align: center;
 }
 
-body .copyright .copyright__main {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: copyright-main;
-  color: white;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 24px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  -ms-grid-row-align: center;
-      align-self: center;
-  text-align: justify;
-      grid-template-areas: "copyright-main-one" "copyright-main-two" "copyright-main-three";
-}
-
-body .copyright .copyright__main .copyright__main_one {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: copyright-main-one;
-}
-
-body .copyright .copyright__main .copyright__main_two {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: copyright-main-two;
-}
-
-body .copyright .copyright__main .copyright__main_three {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: copyright-main-three;
-}
-
-body .copyright .copyright__main .copyright__main_two h4,
-body .copyright .copyright__main .copyright__main_three h4 {
-  color: #3b434d;
-}
-
-body .copyright .copyright__main .copyright__main_two p,
-body .copyright .copyright__main .copyright__main_three p {
-  padding-left: 20px;
+body .wiki__talents .table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  text-align: center;
 }
 
 body .footer {
@@ -294,6 +254,30 @@ body .footer .footer__anchor a {
 
 body .footer .footer__anchor a:hover {
   color: #fc8102;
+}
+
+body .scrollup {
+  position: fixed;
+  color: #b364d3;
+  background-color: #fdf378;
+  right: 20px;
+  bottom: 0px;
+  padding: 4px 10px;
+  font-size: 60px;
+  border: 1px solid #b364d3;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  cursor: pointer;
+  display: none;
+  text-align: center;
+}
+
+body .scrollup:hover {
+  color: #fdf378;
+  background-color: #b364d3;
+  border: 1px solid #fdf378;
+  -webkit-transition: color 0.2s linear, background-color 0.2s linear, border 0.2s linear;
+  transition: color 0.2s linear, background-color 0.2s linear, border 0.2s linear;
 }
 
 @media only screen and (max-width: 576px) {
@@ -346,22 +330,24 @@ body .footer .footer__anchor a:hover {
   body .header .nav .nav-item .dropdown-menu .dropdown-item {
     text-align: center;
   }
+  body .header .nav .nav-item .dropdown-menu .dropdown-item.active,
+  body .header .nav .nav-item .dropdown-menu .dropdown-item:active {
+    color: #3b434d;
+    text-decoration: none;
+    background-color: #fc8102;
+  }
   body .header .nav-pills .show > .nav-link {
     background-color: #fc8102;
     color: #3b434d;
   }
-  body .copyright {
+  body .wiki__talents {
+    display: block;
     padding: 0 30px;
-    -ms-grid-rows: 50px 130px 1fr;
-        grid-template-rows: 50px 130px 1fr;
+    -ms-grid-rows: 50px 0.01fr 1fr;
+        grid-template-rows: 50px 0.01fr 1fr;
   }
-  body .copyright .copyright__banner {
+  body .wiki__talents .wiki__talents_banner {
     font-size: 42px;
-  }
-  body .copyright .copyright__main {
-    font-size: 18px;
-    -ms-grid-rows: 1fr 1fr 0.6fr;
-        grid-template-rows: 1fr 1fr 0.6fr;
   }
   body .footer {
     padding: 0 30px;
@@ -393,19 +379,18 @@ body .footer .footer__anchor a:hover {
   }
   body .header .header__nav {
     margin-right: 0;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
   }
-  body .copyright {
+  body .wiki__talents {
     padding: 0 30px;
     -ms-grid-rows: 50px 130px 1fr;
         grid-template-rows: 50px 130px 1fr;
   }
-  body .copyright .copyright__banner {
+  body .wiki__talents .wiki__talents_banner {
     font-size: 42px;
-  }
-  body .copyright .copyright__main {
-    font-size: 18px;
-    -ms-grid-rows: 1fr 1fr 0.7fr;
-        grid-template-rows: 1fr 1fr 0.7fr;
   }
   body .footer {
     padding: 0 30px;
@@ -416,6 +401,8 @@ body .footer .footer__anchor a:hover {
   body {
     max-width: 960px;
     margin: 0 auto;
+    -ms-grid-rows: 100px 1fr 100px;
+        grid-template-rows: 100px 1fr 100px;
   }
   body .header {
     padding: 0;
@@ -426,17 +413,16 @@ body .footer .footer__anchor a:hover {
   body .header .header__nav {
     margin-right: 0;
   }
-  body .copyright {
+  body .wiki__talents {
     padding: 0 30px;
     -ms-grid-rows: 50px 130px 1fr;
         grid-template-rows: 50px 130px 1fr;
   }
-  body .copyright .copyright__main {
-    -ms-grid-rows: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+  body .wiki__talents .wiki__talents_banner {
+    font-size: 42px;
   }
   body .footer {
     padding: 0 30px;
   }
 }
-/*# sourceMappingURL=copyright.css.map */
+/*# sourceMappingURL=wiki-quests.css.map */

@@ -34,7 +34,7 @@ body .header {
   -ms-grid-column: 1;
   grid-area: header;
   background-color: white;
-  padding: 0 200px;
+  padding: 0 150px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 0.3fr 0.3fr 1fr;
@@ -97,7 +97,7 @@ body .news {
   grid-area: news;
   background: -webkit-gradient(linear, right top, left top, from(#a341ff), to(#9198e5));
   background: linear-gradient(to left, #a341ff, #9198e5);
-  padding: 0 200px;
+  padding: 0 150px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -256,7 +256,7 @@ body .footer {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: footer;
-  padding: 0 200px;
+  padding: 0 150px;
   -ms-grid-column-align: center;
       justify-self: center;
   -ms-flex-item-align: center;
