@@ -1,12 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Myriad Pro Regular";
-  src: url("MyriadPro-Regular.eot");
-  src: url("MyriadPro-Regular.eot?#iefix") format("embedded-opentype"), url("MyriadPro-Regular.woff") format("woff"), url("MyriadPro-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 h1,
 h2,
 h3,
@@ -1124,6 +1116,13 @@ body .support .support__user .user__info_four .info__network {
       align-self: start;
 }
 
+body .support .support__user .user__info_one .info__network a div,
+body .support .support__user .user__info_two .info__network a div,
+body .support .support__user .user__info_three .info__network a div,
+body .support .support__user .user__info_four .info__network a div {
+  color: #3b434d;
+}
+
 body .support .support__user .user__info_one .info__network a:visited,
 body .support .support__user .user__info_two .info__network a:visited,
 body .support .support__user .user__info_three .info__network a:visited,
@@ -1836,8 +1835,8 @@ body .scrollup:hover {
 
 @media only screen and (max-width: 576px) {
   body {
-    max-width: 540px;
-    margin: 0;
+    max-width: 576px;
+    margin: 0 auto;
     display: block;
   }
   body .header {
@@ -2104,7 +2103,7 @@ body .scrollup:hover {
   body .support .support__user .user__info_two,
   body .support .support__user .user__info_three,
   body .support .support__user .user__info_four {
-    display: inline-block;
+    display: block;
   }
   body .support .support__user .user__info_one .info__name span,
   body .support .support__user .user__info_two .info__name span,
@@ -2215,26 +2214,15 @@ body .scrollup:hover {
 
 @media only screen and (min-width: 577px) and (max-width: 768px) {
   body {
-    max-width: 720px;
-    margin: 0;
-    -ms-grid-rows: 200px 560px 600px 505px 450px 450px 890px 530px 530px 745px 100px;
-        grid-template-rows: 200px 560px 600px 505px 450px 450px 890px 530px 530px 745px 100px;
-        grid-template-areas: "header" "sub-header" "features" "check" "screenhots" "comments" "blog" "newsletter" "support" "get" "footer";
+    max-width: 768px;
+    margin: 0 auto;
+    display: block;
   }
   body .header {
     padding: 0;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: "header-logo header-logo header-logo" "header-nav header-nav header-nav";
+    display: block;
   }
   body .header .header__logo {
-    -ms-grid-column-align: center;
-        justify-self: center;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
     text-align: center;
   }
   body .header .header__nav {
@@ -2245,70 +2233,59 @@ body .scrollup:hover {
         grid-template-rows: 1fr 1fr;
   }
   body .sub__header {
+    display: block;
     padding: 0;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 560px;
-        grid-template-rows: 560px;
-    grid-gap: 0;
+  }
+  body .sub__header .sub__phone {
+    display: none;
   }
   body .sub__header .sub__empires {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: sub-empires;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-row-align: center;
-        align-self: center;
-    -ms-grid-column-align: stretch;
-        justify-self: stretch;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr 50px 100px;
-        grid-template-rows: 1fr 1fr 50px 100px;
-        grid-template-areas: "hello" "description" "download" "icons";
+    display: block;
   }
   body .sub__header .sub__empires .empires__hello {
     text-align: center;
-    padding: 0 30px;
+    padding: 0;
     font-size: 42px;
   }
   body .sub__header .sub__empires .empires__description {
     text-align: center;
-    padding: 0 30px;
+    padding: 0;
   }
   body .sub__header .sub__empires .empires__download {
     text-align: center;
   }
   body .sub__header .sub__empires .empires__icons {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    -ms-grid-column-align: center;
-        justify-self: center;
+    display: block;
     text-align: center;
+    padding-bottom: 20px;
+  }
+  body .sub__header .sub__empires .empires__icons .empires__appStore:hover,
+  body .sub__header .sub__empires .empires__icons .empires__googlePlay:hover {
+    opacity: 1;
+    cursor: pointer;
+    -webkit-transition: none;
+    transition: none;
+    -webkit-transform: none;
+            transform: none;
   }
   body .content {
+    display: block;
     padding: 0;
-    -ms-grid-rows: 100px 230px 255px;
-        grid-template-rows: 100px 230px 255px;
   }
   body .content .content__banner {
     font-size: 42px;
   }
   body .content .content__main {
-    padding: 0 30px;
+    padding: 0;
   }
   body .content .content__advantage {
-    -ms-grid-rows: 50px 115px;
-        grid-template-rows: 50px 115px;
-        grid-template-areas: "advantage-community advantage-event advantage-three" "advantage-community advantage-event advantage-three";
+    display: block;
   }
   body .content .content__advantage .advantage__community .community__svg {
     display: none;
   }
   body .content .content__advantage .advantage__community .community__content {
-    padding: 0 30px;
+    padding: 0;
     margin-top: 10px;
     line-height: 24px;
   }
@@ -2316,7 +2293,7 @@ body .scrollup:hover {
     display: none;
   }
   body .content .content__advantage .advantage__event .event__content {
-    padding: 0 30px;
+    padding: 0;
     margin-top: 10px;
     line-height: 24px;
   }
@@ -2324,30 +2301,21 @@ body .scrollup:hover {
     display: none;
   }
   body .content .content__advantage .advantage__three .three__content {
-    padding: 0 30px;
+    padding: 0;
     margin-top: 10px;
     line-height: 24px;
+    padding-bottom: 20px;
   }
   body .check {
+    display: block;
     padding: 0;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 126.25px 126.25px 126.25px 126.25px;
-        grid-template-rows: 126.25px 126.25px 126.25px 126.25px;
+    padding: 0;
   }
   body .check .check__banner {
     font-size: 42px;
   }
   body .check .check__time {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 30px 96.25px;
-        grid-template-rows: 30px 96.25px;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    -ms-grid-column-align: center;
-        justify-self: center;
+    display: block;
     text-align: center;
   }
   body .check .check__time .time__icons {
@@ -2362,13 +2330,10 @@ body .scrollup:hover {
     text-align: center;
   }
   body .check .check__time .time__content {
-    padding: 0 30px;
+    padding: 0;
   }
   body .check .check__space {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 30px 96.25px;
-        grid-template-rows: 30px 96.25px;
+    display: block;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -2388,13 +2353,10 @@ body .scrollup:hover {
     text-align: center;
   }
   body .check .check__space .space__content {
-    padding: 0 30px;
+    padding: 0;
   }
   body .check .check__settings {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 30px 96.25px;
-        grid-template-rows: 30px 96.25px;
+    display: block;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -2414,14 +2376,15 @@ body .scrollup:hover {
     text-align: center;
   }
   body .check .check__settings .settings__content {
-    padding: 0 30px;
+    padding: 0;
   }
   body .check .check__phone {
     display: none;
   }
   body .screenshots {
-    -ms-grid-rows: 101.25px 498.75px;
-        grid-template-rows: 101.25px 498.75px;
+    display: block;
+    text-align: center;
+    padding: 0;
   }
   body .screenshots .screenshots__banner {
     -ms-flex-item-align: center;
@@ -2436,69 +2399,68 @@ body .scrollup:hover {
         align-self: start;
   }
   body .comments {
-    -ms-grid-rows: 450px;
-        grid-template-rows: 450px;
-    padding: 0 30px;
+    display: block;
+    padding: 0;
+  }
+  body .comments #nav_comments {
+    width: 100%;
+    bottom: 12%;
+    height: 11px;
+    text-align: center;
+    z-index: 99;
+    cursor: default;
+  }
+  body .comments #nav_comments .buttons {
+    top: -82px;
+  }
+  body .comments .comments__quote .comments__image {
+    text-align: center;
+    width: 130px;
+    float: left;
+  }
+  body .comments .comments__quote .comments__user .user__quote:before {
+    content: "“";
+    left: -10px;
+    top: 120px;
+  }
+  body .comments .comments__quote .comments__user .user__quote:after {
+    content: "”";
+    right: -10px;
+    bottom: 60px;
   }
   body .support {
-    padding: 0 30px;
-    -ms-grid-rows: 100px 50px 385px;
-        grid-template-rows: 100px 50px 385px;
+    display: block;
+    padding: 0;
   }
   body .support .support__banner {
-    -ms-grid-column-align: center;
-        justify-self: center;
-    -ms-flex-item-align: end;
-        -ms-grid-row-align: end;
-        align-self: end;
     font-size: 42px;
+    text-align: center;
   }
   body .support .support__contact {
-    padding: 0 30px;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    display: block;
+    padding: 10px 0;
+    text-align: center;
     font-size: 22px;
   }
   body .support .support__contact a {
     text-decoration: none;
     color: #3b434d;
     padding: 0 10px;
+    display: block;
+    text-align: center;
   }
   body .support .support__contact a:hover {
     font-size: 24px;
   }
   body .support .support__user {
-    -ms-grid-rows: 192.5px 192.5px;
-        grid-template-rows: 192.5px 192.5px;
-    grid-column-gap: 20px;
+    display: block;
+    text-align: center;
   }
   body .support .support__user .user__info_one,
   body .support .support__user .user__info_two,
   body .support .support__user .user__info_three,
   body .support .support__user .user__info_four {
-    -ms-grid-columns: 1fr 0.3fr;
-        grid-template-columns: 1fr 0.3fr;
-    -ms-grid-rows: 64px 64px;
-        grid-template-rows: 64px 64px;
-    grid-gap: 10px;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-        grid-template-areas: "info-name info-photo" "info-network info-photo";
-  }
-  body .support .support__user .user__info_one .info__name,
-  body .support .support__user .user__info_two .info__name,
-  body .support .support__user .user__info_three .info__name,
-  body .support .support__user .user__info_four .info__name {
-    -ms-grid-column-align: end;
-        justify-self: end;
-    -ms-flex-item-align: end;
-        -ms-grid-row-align: end;
-        align-self: end;
-    text-align: right;
+    display: block;
   }
   body .support .support__user .user__info_one .info__name span,
   body .support .support__user .user__info_two .info__name span,
@@ -2507,21 +2469,11 @@ body .scrollup:hover {
     font-size: 16px;
     font-weight: 600;
   }
-  body .support .support__user .user__info_one .info__bio,
-  body .support .support__user .user__info_two .info__bio,
-  body .support .support__user .user__info_three .info__bio,
-  body .support .support__user .user__info_four .info__bio {
-    display: none;
-  }
   body .support .support__user .user__info_one .info__photo,
   body .support .support__user .user__info_two .info__photo,
   body .support .support__user .user__info_three .info__photo,
   body .support .support__user .user__info_four .info__photo {
-    -ms-grid-column-align: end;
-        justify-self: end;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    display: none;
   }
   body .support .support__user .user__info_one .info__photo img,
   body .support .support__user .user__info_two .info__photo img,
@@ -2533,45 +2485,11 @@ body .scrollup:hover {
   body .support .support__user .user__info_two .info__network,
   body .support .support__user .user__info_three .info__network,
   body .support .support__user .user__info_four .info__network {
-    -ms-grid-column-align: end;
-        justify-self: end;
-    -ms-flex-item-align: start;
-        -ms-grid-row-align: start;
-        align-self: start;
-  }
-  body .support .support__user .user__info_two,
-  body .support .support__user .user__info_four {
-    -ms-grid-columns: 0.3fr 1fr;
-        grid-template-columns: 0.3fr 1fr;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-        grid-template-areas: "info-photo info-name" "info-photo info-network";
-  }
-  body .support .support__user .user__info_two .info__name,
-  body .support .support__user .user__info_four .info__name {
-    -ms-grid-column-align: start;
-        justify-self: start;
-    -ms-flex-item-align: end;
-        -ms-grid-row-align: end;
-        align-self: end;
-    text-align: left;
-  }
-  body .support .support__user .user__info_two .info__photo,
-  body .support .support__user .user__info_four .info__photo {
-    -ms-grid-column-align: start;
-        justify-self: start;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    text-align: right;
   }
   body .support .support__user .user__info_two .info__network,
   body .support .support__user .user__info_four .info__network {
-    -ms-grid-column-align: start;
-        justify-self: start;
-    -ms-flex-item-align: start;
-        -ms-grid-row-align: start;
-        align-self: start;
+    text-align: left;
   }
   body .newsletter {
     padding: 0;
@@ -2584,24 +2502,41 @@ body .scrollup:hover {
     padding: 0 30px;
   }
   body .blog {
+    display: block;
     padding: 0;
+    background: none;
+  }
+  body .blog #nav_blog .but {
+    bottom: 30px;
+    width: 14px;
+    height: 14px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: transparent;
+    border: 1.2px solid #b364d3;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
   }
   body .blog .blog__banner {
-    padding: 0 30px;
+    padding: 0;
     font-size: 42px;
     font-weight: 600;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    text-align: center;
   }
   body .blog .blog__main {
-    padding: 0 30px;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 500px;
-        grid-template-rows: 500px;
+    display: block;
+    padding: 0;
+  }
+  body .blog .blog__main input {
+    display: none;
+  }
+  body .blog .blog__main .events .events__one {
+    -webkit-padding-start: 0;
+            padding-inline-start: 0;
+    list-style-type: none;
+    display: block;
   }
   body .get {
     padding: 0;
@@ -2744,6 +2679,51 @@ body .scrollup:hover {
   }
   body .footer {
     padding: 0;
+  }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1300px) {
+  body .sub__header {
+    padding: 0;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 860px;
+        grid-template-rows: 860px;
+    grid-gap: 0;
+  }
+  body .sub__header .sub__phone {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  body .sub__header .sub__phone .phone__apple {
+    background-image: url(../images/samsung.png);
+    bottom: 0;
+    left: 0;
+    -webkit-animation: apple-display 1.5s linear;
+            animation: apple-display 1.5s linear;
+  }
+  @-webkit-keyframes apple-display {
+    0% {
+      left: -480px;
+    }
+    100% {
+      left: 0;
+    }
+  }
+  @keyframes apple-display {
+    0% {
+      left: -480px;
+    }
+    100% {
+      left: 0;
+    }
+  }
+  body .sub__header .sub__phone .phone__samsung {
+    display: none;
+  }
+  body .sub__header .sub__empires {
+    padding-left: 20px;
+    padding-right: 150px;
   }
 }
 /*# sourceMappingURL=index.css.map */
