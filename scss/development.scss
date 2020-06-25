@@ -154,6 +154,11 @@ body {
                 color: $darkColor;
             }
         }
+        .development {
+            img {
+                width: 100%;
+            }
+        }
         .footer {
             padding: 0 30px;
         }
@@ -180,6 +185,11 @@ body {
                 margin-right: 0;
             }
         }
+        .development {
+            img {
+                width: 100%;
+            }
+        }
         .footer {
             padding: 0 30px;
         }
@@ -195,6 +205,11 @@ body {
             grid-template-areas: "header-logo header-nav header-nav";
             .header__nav {
                 margin-right: 0;
+            }
+        }
+        .development {
+            img {
+                width: 100%;
             }
         }
         .footer {

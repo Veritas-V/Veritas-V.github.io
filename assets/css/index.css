@@ -1903,6 +1903,15 @@ body .scrollup:hover {
     text-align: center;
     padding-bottom: 20px;
   }
+  body .sub__header .sub__empires .empires__icons .empires__appStore:hover,
+  body .sub__header .sub__empires .empires__icons .empires__googlePlay:hover {
+    opacity: 1;
+    cursor: pointer;
+    -webkit-transition: none;
+    transition: none;
+    -webkit-transform: none;
+            transform: none;
+  }
   body .content {
     display: block;
     padding: 0;
@@ -1939,7 +1948,7 @@ body .scrollup:hover {
     padding: 0;
     margin-top: 10px;
     line-height: 24px;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
   }
   body .check {
     display: block;
@@ -2089,6 +2098,7 @@ body .scrollup:hover {
   }
   body .support .support__user {
     display: block;
+    text-align: center;
   }
   body .support .support__user .user__info_one,
   body .support .support__user .user__info_two,
@@ -2145,6 +2155,7 @@ body .scrollup:hover {
   body .blog {
     display: block;
     padding: 0;
+    background: none;
   }
   body .blog #nav_blog .but {
     bottom: 30px;

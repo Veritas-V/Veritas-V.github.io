@@ -316,8 +316,7 @@ body .scrollup:hover {
   body {
     max-width: 540px;
     margin: 0 auto;
-    -ms-grid-rows: 150px 1fr 100px;
-        grid-template-rows: 150px 1fr 100px;
+    display: block;
   }
   body .header {
     padding: 0;
@@ -374,12 +373,13 @@ body .scrollup:hover {
   }
   body .wiki__talents {
     display: block;
-    padding: 0 30px;
-    -ms-grid-rows: 50px 0.01fr 1fr;
-        grid-template-rows: 50px 0.01fr 1fr;
+    padding: 0;
   }
   body .wiki__talents .wiki__talents_banner {
     font-size: 42px;
+  }
+  body .wiki__talents .table {
+    display: block;
   }
   body .footer {
     padding: 0 30px;

@@ -1391,6 +1391,14 @@ body {
                     display: block;
                     text-align: center;
                     padding-bottom: 20px;
+                    .empires__appStore:hover,
+                    .empires__googlePlay:hover {
+                        opacity: 1;
+                        cursor: pointer;
+                        transition: none;
+                        transform: none;
+                        // animation: store-move 0.5s linear infinite alternate;
+                    }
                 }
             }
         }
@@ -1443,7 +1451,7 @@ body {
                         padding: 0;
                         margin-top: 10px;
                         line-height: 24px;
-                        margin-bottom: 20px;
+                        padding-bottom: 20px;
                     }
                 }
             }
@@ -1602,6 +1610,7 @@ body {
             }
             .support__user {
                 display: block;
+                text-align: center;
                 // grid-template-rows: 192.5px 192.5px;
                 // grid-column-gap: 20px;
                 .user__info_one,
@@ -1686,6 +1695,7 @@ body {
         .blog {
             display: block;
             padding: 0;
+            background: none;
             #nav_blog {
                 .but {
                     bottom: 30px;

@@ -181,6 +181,9 @@ body .footer .footer__anchor a:hover {
     background-color: #fc8102;
     color: #3b434d;
   }
+  body .development img {
+    width: 100%;
+  }
   body .footer {
     padding: 0 30px;
   }
@@ -212,6 +215,9 @@ body .footer .footer__anchor a:hover {
   body .header .header__nav {
     margin-right: 0;
   }
+  body .development img {
+    width: 100%;
+  }
   body .footer {
     padding: 0 30px;
   }
@@ -230,6 +236,9 @@ body .footer .footer__anchor a:hover {
   }
   body .header .header__nav {
     margin-right: 0;
+  }
+  body .development img {
+    width: 100%;
   }
   body .footer {
     padding: 0 30px;
