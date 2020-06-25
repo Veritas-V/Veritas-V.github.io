@@ -1735,7 +1735,7 @@ body .get .get__network {
       justify-self: center;
   -ms-grid-row-align: stretch;
       align-self: stretch;
-  grid-column-gap: 40px;
+  grid-column-gap: 20px;
       grid-template-areas: "network-facebook network-twitter network-pinterest network-google network-dribbble";
 }
 
@@ -1769,19 +1769,33 @@ body .get .get__network .network__facebook {
   grid-area: network-facebook;
 }
 
-body .get .get__network .network__icons {
-  width: 30px;
+body .get .get__network a div {
+  color: white;
 }
 
-body .get .get__network .network__icons:hover {
-  background-color: #3b434d;
-  border-radius: 50%;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  -webkit-transition: background-color 0.3s linear, -webkit-transform 0.3s linear;
-  transition: background-color 0.3s linear, -webkit-transform 0.3s linear;
-  transition: transform 0.3s linear, background-color 0.3s linear;
-  transition: transform 0.3s linear, background-color 0.3s linear, -webkit-transform 0.3s linear;
+body .get .get__network a:visited {
+  color: white;
+}
+
+body .get .get__network [class^="icon-"],
+body .get .get__network [class*=" icon-"] {
+  height: 50px;
+  width: 50px;
+  font-size: 32px;
+  text-align: center;
+  display: inline-block;
+  fill: currentColor;
+}
+
+body .get .get__network [class^="icon-"]:hover,
+body .get .get__network [class*=" icon-"]:hover {
+  color: #fdf378;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
 }
 
 body .footer {
@@ -2204,6 +2218,7 @@ body .scrollup:hover {
     display: none;
   }
   body .blog .blog__main .events .events__one {
+    display: block;
     -webkit-padding-start: 0;
             padding-inline-start: 0;
     list-style-type: none;

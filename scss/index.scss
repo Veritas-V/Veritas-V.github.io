@@ -1226,7 +1226,7 @@ body {
             grid-template-rows: 1fr;
             justify-self: center;
             align-self: stretch;
-            grid-column-gap: 40px;
+            grid-column-gap: 20px;
             grid-template-areas: "network-facebook network-twitter network-pinterest network-google network-dribbble";
             .network__facebook {
                 grid-area: network-facebook;
@@ -1243,14 +1243,28 @@ body {
             .network__facebook {
                 grid-area: network-facebook;
             }
-            .network__icons {
-                width: 30px;
+            a {
+                div {
+                    color: $lightColor;
+                }
             }
-            .network__icons:hover {
-                background-color: $darkColor;
-                border-radius: 50%;
-                transform: scale(1.5);
-                transition: transform 0.3s linear, background-color 0.3s linear;
+            a:visited {
+                color: $lightColor;
+            }
+            [class^="icon-"],
+            [class*=" icon-"] {
+                height: 50px;
+                width: 50px;
+                font-size: 32px;
+                text-align: center;
+                display: inline-block;
+                fill: currentColor;
+            }
+            [class^="icon-"]:hover,
+            [class*=" icon-"]:hover {
+                color: $yellowColor;
+                transform: scale(1.2);
+                transition: transform 0.3s linear;
             }
         }
     }
@@ -1743,6 +1757,7 @@ body {
                     .events__one {
                         // padding: 0;
                         // margin: 0;
+                        display: block;
                         padding-inline-start: 0;
                         list-style-type: none;
                         display: block;
