@@ -943,27 +943,28 @@ body {
                 border-color: $purpleColor;
                 box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3) inset;
             }
-            button {
+            .show {
                 height: 48px;
                 cursor: pointer;
+                text-align: center;
                 border: 1px solid $purpleColor;
                 color: $lightColor;
                 font-size: 18px;
                 font-weight: $semibold;
-                line-height: 24px;
+                line-height: 18px;
                 text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
                 background-color: $purpleColor;
                 transition: background-color 0.2s ease-out;
                 border-radius: 5px;
                 box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
             }
-            button:hover {
+            .show:hover {
                 background-color: $lightColor;
                 border-color: $lightColor;
                 color: $purpleColor;
                 text-shadow: none;
             }
-            button:active {
+            .show:active {
                 text-shadow: none;
                 box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;
             }
@@ -1188,7 +1189,8 @@ body {
             input[type="number"] {
                 -moz-appearance: textfield;
             }
-            button {
+            // button {
+            .subm {
                 position: relative;
                 bottom: 37.5px;
                 cursor: pointer;
@@ -1203,13 +1205,15 @@ body {
                 border-radius: 5px;
                 box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
             }
-            button:hover {
+            // button:hover {
+            .subm:hover {
                 background-color: $yellowColor;
                 border-color: $purpleColor;
                 color: $purpleColor;
                 text-shadow: none;
             }
-            button:active {
+            // button:active {
+            .subm:active {
                 position: relative;
                 text-shadow: none;
                 box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;

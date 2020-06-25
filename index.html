@@ -29,23 +29,24 @@
         <nav class="header__nav">
             <a class="nav__link" href="about-the-game.html">об игре</a>
             <a class="nav__link" href="news.html">новости</a>
-            <a class="nav__link" href="#">поддержка</a>
+            <a class="nav__link" href="support.html">поддержка</a>
             <a class="nav__link" href="faq.html">faq</a>
             <a class="nav__link" href="wiki.html">wiki</a>
             <a class="nav__link" href="development.html">блог</a>
         </nav>
         <ul class="nav nav-pills">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Меню</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="about-the-game.html">Об игре</a>
-                <a class="dropdown-item" href="news.html">Новости</a>
-                <a class="dropdown-item" href="#">Поддержка</a>
-                <a class="dropdown-item" href="faq.html">FAQ</a>
-                <a class="dropdown-item" href="wiki.html">Wiki</a>
-                <a class="dropdown-item" href="development.html">Блог</a>
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                    aria-expanded="false">Меню</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="about-the-game.html">Об игре</a>
+                    <a class="dropdown-item" href="news.html">Новости</a>
+                    <a class="dropdown-item" href="support.html">Поддержка</a>
+                    <a class="dropdown-item" href="faq.html">FAQ</a>
+                    <a class="dropdown-item" href="wiki.html">Wiki</a>
+                    <a class="dropdown-item" href="development.html">Блог</a>
             </li>
-          </ul>
+        </ul>
     </header>
 
     <!-- скачать -->
@@ -340,7 +341,8 @@
                     <a href="#" target="_blank" style="text-decoration: none;">
                         <div class="icon-pinterest"></div>
                     </a>
-                    <a href="https://in.linkedin.com/in/jose-saarniniemi-40795024/ru-ru" target="_blank" style="text-decoration: none;">
+                    <a href="https://in.linkedin.com/in/jose-saarniniemi-40795024/ru-ru" target="_blank"
+                        style="text-decoration: none;">
                         <div class="icon-linkedin"></div>
                     </a>
                     <a href="#" target="_blank" style="text-decoration: none;">
@@ -357,10 +359,11 @@
         <div class="newsletter__main">Подпишитесь на новостную рассылку, чтобы получать последние новости Empires &amp;
             Puzzles, новый контент, специальные предложения и многое другое (включая прочие новости Empires &amp;
             Puzzles, событиях и акциях) в свой почтовый ящик.<br>Просим правильно указать Ваш E-mail адрес.</div>
-        <form class="newsletter__mailing">
-            <input type="email" placeholder="&#128386; Ваш E-mail адрес" required="" id="email">
-            <button type="submit" id="show">Подписаться!</button>
-            <div clas="row" id="result"></div>
+        <form id="mailing" class="newsletter__mailing">
+            <input type="email" placeholder="&#128386; Ваш E-mail адрес" required="" id="mmm">
+            <input type="submit" value="Подписаться!" class="show">
+            <!-- <button type="submit" id="show">Подписаться!</button> -->
+            <!-- <div clas="row" id="result"></div> -->
         </form>
     </div>
 
@@ -566,13 +569,14 @@
         <div class="get__content">Служба поддержки Empires &amp; Puzzles, она же «поддержка Empires &amp; Puzzles»,
             «Empires &amp; Puzzles саппорт» и «Empires &amp; Puzzles Support», может помочь решить проблему с игрой,
             оказать помощь в оплате игры и многое другое.</div>
-        <form class="get__form">
-            <input type="text" placeholder="Имя" required="" class="fName">
-            <input type="text" placeholder="Фамилия" required="" class="lName">
-            <input type="email" placeholder="E-mail адрес" required="" class="eAddress">
-            <input type="number" placeholder="Тел. номер" required="" class="tNumber">
-            <input type="text" placeholder="Комментарий" required="" class="comText">
-            <button type="submit" class="subm">ОТПРАВИТЬ СООБЩЕНИЕ</button>
+        <form id="contact" class="get__form">
+            <input type="text" placeholder="Имя" required="" name="name" class="fName">
+            <input type="text" placeholder="Фамилия" required="" name="surn" class="lName">
+            <input type="email" placeholder="E-mail адрес" required="" name="email" class="eAddress">
+            <input type="number" placeholder="Тел. номер" required="" name="number" class="tNumber">
+            <input type="text" placeholder="Комментарий" required="" name="coment" class="comText">
+            <input type="submit" value="ОТПРАВИТЬ СООБЩЕНИЕ" class="subm">
+            <!-- <button type="submit" class="subm">ОТПРАВИТЬ СООБЩЕНИЕ</button> -->
         </form>
         <div class="get__network">
             <div class="network__facebook">
@@ -641,7 +645,58 @@
                 $('.scrollup').fadeOut();
             }
         });
-        
+
+        $("#mailing").submit(function (e) {
+            e.preventDefault();
+            var form = this;
+            $.ajax({
+                type: "POST",
+                url: "http://109.235.69.203:8080/data/1008",
+                data: $("#mailing").serialize()
+            }).done(function () {
+                alert($("#mailing").serialize());
+                form.reset();
+            });
+            return false;
+        });
+
+        $("#contact").submit(function () {
+            var form = this;
+            $.ajax({
+                type: "POST",
+                url: "http://109.235.69.203:8080/data/1008",
+                data: $("#contact").serialize()
+            }).done(function () {
+                form.reset();
+            });
+            return false;
+        });
+
+        // $("#contact").submit(function (e) {
+        //     e.preventDefault();
+
+        //     var $contact = $(this);
+        //     var name = $("[name=name]").val();
+        //     var surn = $("[name=surn]").val();
+        //     var email = $("[name=email]").val();
+        //     var number = $("[name=number]").val();
+        //     var coment = $("[name=coment]").val();
+        //     var url = $contact.attr('action');
+        //     var post = $.post("http://109.235.69.203:8080/data/1008", { name, surn, email, number, coment });
+        //     alert("Отправлено")
+        //         .done(function () {
+        //             form.reset();
+        //         });
+        // });
+
+        // $.get("button".click(function (data) {
+        //     $('body').append("Name: " + data.name)
+        //         .append("Time: " + data.time);
+        // }, "json"));
+        // if (isset($_POST['submit'])) {
+        //     echo("<meta http-equiv='refresh' content='0'>");
+        // }
     </script>
 </body>
+
 </html>

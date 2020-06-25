@@ -1313,14 +1313,15 @@ body .newsletter .newsletter__mailing input:focus {
           box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3) inset;
 }
 
-body .newsletter .newsletter__mailing button {
+body .newsletter .newsletter__mailing .show {
   height: 48px;
   cursor: pointer;
+  text-align: center;
   border: 1px solid #b364d3;
   color: white;
   font-size: 18px;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 18px;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
   background-color: #b364d3;
   -webkit-transition: background-color 0.2s ease-out;
@@ -1330,14 +1331,14 @@ body .newsletter .newsletter__mailing button {
           box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
 
-body .newsletter .newsletter__mailing button:hover {
+body .newsletter .newsletter__mailing .show:hover {
   background-color: white;
   border-color: white;
   color: #b364d3;
   text-shadow: none;
 }
 
-body .newsletter .newsletter__mailing button:active {
+body .newsletter .newsletter__mailing .show:active {
   text-shadow: none;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;
           box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;
@@ -1688,7 +1689,7 @@ body .get .get__form input[type="number"] {
   -moz-appearance: textfield;
 }
 
-body .get .get__form button {
+body .get .get__form .subm {
   position: relative;
   bottom: 37.5px;
   cursor: pointer;
@@ -1706,14 +1707,14 @@ body .get .get__form button {
           box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
 
-body .get .get__form button:hover {
+body .get .get__form .subm:hover {
   background-color: #fdf378;
   border-color: #b364d3;
   color: #b364d3;
   text-shadow: none;
 }
 
-body .get .get__form button:active {
+body .get .get__form .subm:active {
   position: relative;
   text-shadow: none;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset;

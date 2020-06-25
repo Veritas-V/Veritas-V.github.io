@@ -252,7 +252,7 @@ body {
         display: block;
         // grid-template-rows: 150px 1fr 100px;
         .header {
-            padding: 0;
+            padding: 0 30px;
             display: block;
             // grid-template-columns: 1fr;
             // grid-template-rows: 1fr 1fr;
@@ -305,7 +305,7 @@ body {
         }
         .wiki__talents {
             display: block;
-            padding: 0;
+            padding: 0 30px;
             // grid-template-rows: 50px 0.01fr 1fr;
             .wiki__talents_banner {
                 font-size: 42px;
@@ -325,7 +325,7 @@ body {
         margin: 0 auto;
         grid-template-rows: 200px 1fr 100px;
         .header {
-            padding: 0;
+            padding: 0 30px;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr;
             grid-template-areas:

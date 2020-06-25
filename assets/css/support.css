@@ -16,9 +16,9 @@ body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 100px 2fr 100px;
-      grid-template-rows: 100px 2fr 100px;
-      grid-template-areas: "header" "faq" "footer";
+  -ms-grid-rows: 100px 1fr 100px;
+      grid-template-rows: 100px 1fr 100px;
+      grid-template-areas: "header" "support" "footer";
 }
 
 body .header {
@@ -83,23 +83,24 @@ body .header .header__nav .nav__link:hover {
   transition: color 0.1s linear, background-color 0.2s linear;
 }
 
-body .faq {
+body .support {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: faq;
-  background: -webkit-gradient(linear, right top, left top, from(#a341ff), to(#9198e5));
-  background: linear-gradient(to left, #a341ff, #9198e5);
+  grid-area: support;
+  background: -webkit-gradient(linear, left top, right top, from(#a341ff), to(#9198e5));
+  background: linear-gradient(to right, #a341ff, #9198e5);
   padding: 0 150px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 50px 80px 50px 1fr;
-      grid-template-rows: 50px 80px 50px 1fr;
-      grid-template-areas: "breadcrumb" "faq-banner" "faq-h4" "faq-main";
+  -ms-grid-rows: 50px 130px 1fr;
+      grid-template-rows: 50px 130px 1fr;
+  padding-bottom: 20px;
+      grid-template-areas: "breadcrumb" "support-banner" "support-main";
 }
 
-body .faq .breadcrumb {
+body .support .breadcrumb {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -108,8 +109,8 @@ body .faq .breadcrumb {
   background-color: transparent;
 }
 
-body .faq .breadcrumb a,
-body .faq .breadcrumb .active {
+body .support .breadcrumb a,
+body .support .breadcrumb .active {
   color: #3b434d;
   display: block;
   background: #fdf378;
@@ -126,28 +127,28 @@ body .faq .breadcrumb .active {
           user-select: none;
 }
 
-body .faq .breadcrumb .breadcrumb-item:first-child > a {
+body .support .breadcrumb .breadcrumb-item:first-child > a {
   padding-left: 15px;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
 
-body .faq .breadcrumb .breadcrumb-item:last-child > a,
-body .faq .breadcrumb .breadcrumb-item.active {
+body .support .breadcrumb .breadcrumb-item:last-child > a,
+body .support .breadcrumb .breadcrumb-item.active {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   margin-right: 0;
   padding-right: 15px;
 }
 
-body .faq .breadcrumb .breadcrumb-item:first-child > a::before,
-body .faq .breadcrumb .breadcrumb-item:last-child > a::after {
+body .support .breadcrumb .breadcrumb-item:first-child > a::before,
+body .support .breadcrumb .breadcrumb-item:last-child > a::after {
   border: none;
 }
 
-body .faq .breadcrumb .breadcrumb-item > a::before,
-body .faq .breadcrumb .breadcrumb-item > a::after,
-body .faq .breadcrumb .breadcrumb-item.active::before {
+body .support .breadcrumb .breadcrumb-item > a::before,
+body .support .breadcrumb .breadcrumb-item > a::after,
+body .support .breadcrumb .breadcrumb-item.active::before {
   content: "";
   position: absolute;
   top: 0;
@@ -157,52 +158,52 @@ body .faq .breadcrumb .breadcrumb-item.active::before {
   height: 0;
 }
 
-body .faq .breadcrumb .breadcrumb-item > a::before,
-body .faq .breadcrumb .breadcrumb-item.active::before {
+body .support .breadcrumb .breadcrumb-item > a::before,
+body .support .breadcrumb .breadcrumb-item.active::before {
   left: -20px;
   border-left-color: transparent;
 }
 
-body .faq .breadcrumb .breadcrumb-item > a::after {
+body .support .breadcrumb .breadcrumb-item > a::after {
   left: 100%;
   border-color: transparent;
   border-left-color: #fdf378;
 }
 
-body .faq .breadcrumb .breadcrumb-item > a:hover {
+body .support .breadcrumb .breadcrumb-item > a:hover {
   background-color: #fc8102;
 }
 
-body .faq .breadcrumb .breadcrumb-item > a:hover::before {
+body .support .breadcrumb .breadcrumb-item > a:hover::before {
   border-color: #fc8102;
   border-left-color: transparent;
 }
 
-body .faq .breadcrumb .breadcrumb-item > a:hover::after {
+body .support .breadcrumb .breadcrumb-item > a:hover::after {
   border-left-color: #fc8102;
 }
 
-body .faq .breadcrumb .breadcrumb-item.active {
+body .support .breadcrumb .breadcrumb-item.active {
   color: #fc8102;
   background-color: white;
 }
 
-body .faq .breadcrumb .breadcrumb-item.active::before {
+body .support .breadcrumb .breadcrumb-item.active::before {
   border-color: white;
   border-left-color: transparent;
 }
 
-body .faq .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+body .support .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   display: inline-block;
   padding-right: 1px;
   color: #6c757d;
   content: "";
 }
 
-body .faq .faq__banner {
+body .support .support__banner {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: faq-banner;
+  grid-area: support-banner;
   color: white;
   font-size: 48px;
   font-weight: 600;
@@ -214,63 +215,34 @@ body .faq .faq__banner {
   text-align: center;
 }
 
-body .faq .faq__h4 {
+body .support .support__main {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  grid-area: faq-h4;
-  color: #3b434d;
-  font-size: 28px;
-  font-weight: 600;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  text-align: center;
-}
-
-body .faq .faq__main {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: faq-main;
-  padding-bottom: 30px;
+  grid-area: support-main;
   color: white;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-body .faq .faq__main .list-group-item.active {
-  z-index: 2;
-  color: #3b434d;
-  background-color: #fc8102;
-  border-color: #fc8102;
+body .support .support__main p {
+  text-align: justify;
 }
 
-body .faq .faq__main #list-pc-list {
-  margin-bottom: 20px;
-}
-
-body .faq .faq__main *,
-body .faq .faq__main *::before,
-body .faq .faq__main *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body .faq .faq__main .padding {
-  padding-left: 30px;
-}
-
-body .faq .faq__main p {
-  position: relative;
-}
-
-body .faq .faq__main p a {
+body .support .support__main p a {
+  text-decoration: none;
   color: #3b434d;
 }
 
-body .footer {
+body .support .support__main p a:hover {
+  color: #3b434d;
+  text-decoration: underline;
+}
+
+.footer {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: footer;
@@ -284,19 +256,19 @@ body .footer {
   font-weight: 600;
 }
 
-body .footer .footer__anchor {
+.footer .footer__anchor {
   text-align: center;
 }
 
-body .footer .footer__anchor a {
+.footer .footer__anchor a {
   color: #b364d3;
 }
 
-body .footer .footer__anchor a:hover {
+.footer .footer__anchor a:hover {
   color: #fc8102;
 }
 
-body .scrollup {
+.footer .scrollup {
   position: fixed;
   color: #b364d3;
   background-color: #fdf378;
@@ -312,7 +284,7 @@ body .scrollup {
   text-align: center;
 }
 
-body .scrollup:hover {
+.footer .scrollup:hover {
   color: #fdf378;
   background-color: #b364d3;
   border: 1px solid #fdf378;
@@ -324,11 +296,11 @@ body .scrollup:hover {
   body {
     max-width: 540px;
     margin: 0 auto;
-    padding: 0;
-    display: block;
+    -ms-grid-rows: 150px 1fr 100px;
+        grid-template-rows: 150px 1fr 100px;
   }
   body .header {
-    padding: 0 30px;
+    padding: 0;
     display: block;
   }
   body .header .header__logo {
@@ -364,15 +336,16 @@ body .scrollup:hover {
     background-color: #fc8102;
     color: #3b434d;
   }
-  body .faq {
-    display: block;
+  body .support {
     padding: 0 30px;
+    -ms-grid-rows: 50px 0.01fr 1fr;
+        grid-template-rows: 50px 0.01fr 1fr;
   }
-  body .faq .faq__banner {
+  body .support .support__banner {
     font-size: 42px;
   }
-  body .faq .faq__main {
-    padding: 0;
+  body .support .support__main {
+    font-size: 18px;
   }
   body .footer {
     padding: 0 30px;
@@ -383,11 +356,11 @@ body .scrollup:hover {
   body {
     max-width: 720px;
     margin: 0 auto;
-    padding: 0;
-    display: block;
+    -ms-grid-rows: 200px 1fr 100px;
+        grid-template-rows: 200px 1fr 100px;
   }
   body .header {
-    padding: 0 30px;
+    padding: 0;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     -ms-grid-rows: 1fr 1fr;
@@ -409,21 +382,16 @@ body .scrollup:hover {
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
   }
-  body .faq {
+  body .support {
     padding: 0 30px;
-    display: block;
+    -ms-grid-rows: 50px 130px 1fr;
+        grid-template-rows: 50px 130px 1fr;
   }
-  body .faq .faq__banner {
+  body .support .support__banner {
     font-size: 42px;
   }
-  body .faq .faq__main {
-    padding: 0;
-  }
-  body .faq .col, body .faq .col-1, body .faq .col-10, body .faq .col-11, body .faq .col-12, body .faq .col-2, body .faq .col-3, body .faq .col-4, body .faq .col-5, body .faq .col-6, body .faq .col-7, body .faq .col-8, body .faq .col-9, body .faq .col-auto, body .faq .col-lg, body .faq .col-lg-1, body .faq .col-lg-10, body .faq .col-lg-11, body .faq .col-lg-12, body .faq .col-lg-2, body .faq .col-lg-3, body .faq .col-lg-4, body .faq .col-lg-5, body .faq .col-lg-6, body .faq .col-lg-7, body .faq .col-lg-8, body .faq .col-lg-9, body .faq .col-lg-auto, body .faq .col-md, body .faq .col-md-1, body .faq .col-md-10, body .faq .col-md-11, body .faq .col-md-12, body .faq .col-md-2, body .faq .col-md-3, body .faq .col-md-4, body .faq .col-md-5, body .faq .col-md-6, body .faq .col-md-7, body .faq .col-md-8, body .faq .col-md-9, body .faq .col-md-auto, body .faq .col-sm, body .faq .col-sm-1, body .faq .col-sm-10, body .faq .col-sm-11, body .faq .col-sm-12, body .faq .col-sm-2, body .faq .col-sm-3, body .faq .col-sm-4, body .faq .col-sm-5, body .faq .col-sm-6, body .faq .col-sm-7, body .faq .col-sm-8, body .faq .col-sm-9, body .faq .col-sm-auto, body .faq .col-xl, body .faq .col-xl-1, body .faq .col-xl-10, body .faq .col-xl-11, body .faq .col-xl-12, body .faq .col-xl-2, body .faq .col-xl-3, body .faq .col-xl-4, body .faq .col-xl-5, body .faq .col-xl-6, body .faq .col-xl-7, body .faq .col-xl-8, body .faq .col-xl-9, body .faq .col-xl-auto {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+  body .support .support__main {
+    font-size: 18px;
   }
   body .footer {
     padding: 0 30px;
@@ -434,7 +402,8 @@ body .scrollup:hover {
   body {
     max-width: 960px;
     margin: 0 auto;
-    display: block;
+    -ms-grid-rows: 100px 1fr 100px;
+        grid-template-rows: 100px 1fr 100px;
   }
   body .header {
     padding: 0;
@@ -445,24 +414,19 @@ body .scrollup:hover {
   body .header .header__nav {
     margin-right: 0;
   }
-  body .faq {
-    padding: 0;
-    display: block;
+  body .support {
+    padding: 0 30px;
+    -ms-grid-rows: 50px 130px 1fr;
+        grid-template-rows: 50px 130px 1fr;
   }
-  body .faq .faq__banner {
+  body .support .support__banner {
     font-size: 42px;
   }
-  body .faq .faq__main {
-    padding: 0;
-  }
-  body .faq .col, body .faq .col-1, body .faq .col-10, body .faq .col-11, body .faq .col-12, body .faq .col-2, body .faq .col-3, body .faq .col-4, body .faq .col-5, body .faq .col-6, body .faq .col-7, body .faq .col-8, body .faq .col-9, body .faq .col-auto, body .faq .col-lg, body .faq .col-lg-1, body .faq .col-lg-10, body .faq .col-lg-11, body .faq .col-lg-12, body .faq .col-lg-2, body .faq .col-lg-3, body .faq .col-lg-4, body .faq .col-lg-5, body .faq .col-lg-6, body .faq .col-lg-7, body .faq .col-lg-8, body .faq .col-lg-9, body .faq .col-lg-auto, body .faq .col-md, body .faq .col-md-1, body .faq .col-md-10, body .faq .col-md-11, body .faq .col-md-12, body .faq .col-md-2, body .faq .col-md-3, body .faq .col-md-4, body .faq .col-md-5, body .faq .col-md-6, body .faq .col-md-7, body .faq .col-md-8, body .faq .col-md-9, body .faq .col-md-auto, body .faq .col-sm, body .faq .col-sm-1, body .faq .col-sm-10, body .faq .col-sm-11, body .faq .col-sm-12, body .faq .col-sm-2, body .faq .col-sm-3, body .faq .col-sm-4, body .faq .col-sm-5, body .faq .col-sm-6, body .faq .col-sm-7, body .faq .col-sm-8, body .faq .col-sm-9, body .faq .col-sm-auto, body .faq .col-xl, body .faq .col-xl-1, body .faq .col-xl-10, body .faq .col-xl-11, body .faq .col-xl-12, body .faq .col-xl-2, body .faq .col-xl-3, body .faq .col-xl-4, body .faq .col-xl-5, body .faq .col-xl-6, body .faq .col-xl-7, body .faq .col-xl-8, body .faq .col-xl-9, body .faq .col-xl-auto {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+  body .support .support__main {
+    font-size: 18px;
   }
   body .footer {
     padding: 0 30px;
   }
 }
-/*# sourceMappingURL=faq.css.map */
+/*# sourceMappingURL=support.css.map */
