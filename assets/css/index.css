@@ -1861,6 +1861,7 @@ body .scrollup:hover {
   }
   body .header .nav .nav-item .dropdown-menu {
     color: #3b434d;
+    width: 100%;
   }
   body .header .nav .nav-item .dropdown-menu .dropdown-item {
     text-align: center;
@@ -2040,6 +2041,14 @@ body .scrollup:hover {
     -ms-flex-item-align: start;
         -ms-grid-row-align: start;
         align-self: start;
+  }
+  body .screenshots .screenshots__slider .slider_img .arrow {
+    position: absolute;
+    font-size: 60pt;
+    top: 45%;
+    right: 15%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   body .comments {
     display: block;
@@ -2683,13 +2692,29 @@ body .scrollup:hover {
 }
 
 @media only screen and (min-width: 993px) and (max-width: 1300px) {
+  body {
+    max-width: 1300px;
+    margin: 0;
+    -ms-grid-rows: 100px 860px 835px 805px 650px 520px 985px 530px 890px 745px 100px;
+        grid-template-rows: 100px 860px 835px 805px 650px 520px 985px 530px 890px 745px 100px;
+        grid-template-areas: "header" "sub-header" "features" "check" "screenhots" "comments" "support" "newsletter" "blog" "get" "footer";
+  }
+  body .header {
+    padding: 0;
+    -ms-grid-columns: 0.3fr 0.3fr 1fr;
+        grid-template-columns: 0.3fr 0.3fr 1fr;
+        grid-template-areas: "header-logo . header-nav";
+  }
+  body .header .header__nav {
+    margin-right: 0;
+  }
   body .sub__header {
     padding: 0;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 860px;
         grid-template-rows: 860px;
-    grid-gap: 0;
+    grid-gap: 20px;
   }
   body .sub__header .sub__phone {
     -ms-grid-columns: 1fr;
@@ -2721,9 +2746,71 @@ body .scrollup:hover {
   body .sub__header .sub__phone .phone__samsung {
     display: none;
   }
-  body .sub__header .sub__empires {
-    padding-left: 20px;
-    padding-right: 150px;
+  body .content {
+    padding: 0;
+  }
+  body .check {
+    padding: 0;
+  }
+  body .check .check__time .time__banner {
+    font-size: 16.5px;
+  }
+  body .check .check__space .space__banner {
+    font-size: 16.5px;
+  }
+  body .check .check__settings .settings__banner {
+    font-size: 16.5px;
+  }
+  body .screenshots {
+    -ms-grid-rows: 101.25px 498.75px;
+        grid-template-rows: 101.25px 498.75px;
+  }
+  body .screenshots .screenshots__banner {
+    font-size: 48px;
+  }
+  body .screenshots .screenshots__slider {
+    width: 70%;
+  }
+  body .comments {
+    -ms-grid-rows: 520px;
+        grid-template-rows: 520px;
+    padding: 0;
+  }
+  body .support {
+    padding: 0;
+  }
+  body .support .support__banner {
+    font-size: 60px;
+  }
+  body .support .support__contact {
+    font-size: 27px;
+  }
+  body .support .support__user .user__info_one .info__photo img,
+  body .support .support__user .user__info_two .info__photo img,
+  body .support .support__user .user__info_three .info__photo img,
+  body .support .support__user .user__info_four .info__photo img {
+    width: 180px;
+  }
+  body .newsletter {
+    padding: 0;
+  }
+  body .newsletter .newsletter__banner {
+    font-size: 60px;
+  }
+  body .blog {
+    padding: 0;
+  }
+  body .blog .blog__banner {
+    font-size: 60px;
+  }
+  body .get {
+    padding: 0;
+  }
+  body .get .get__banner {
+    font-size: 60px;
+  }
+  body .footer {
+    padding: 0;
   }
 }
 /*# sourceMappingURL=index.css.map */

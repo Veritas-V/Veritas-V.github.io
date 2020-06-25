@@ -8,14 +8,6 @@ $regular: 400;
 $semibold: 600;
 $bold: 700;
 
-@font-face {
-    font-family: "Myriad Pro Regular";
-    src: url("MyriadPro-Regular.eot");
-    src: url("MyriadPro-Regular.eot?#iefix") format("embedded-opentype"), url("MyriadPro-Regular.woff") format("woff"),
-        url("MyriadPro-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
 h1,
 h2,
 h3,
@@ -43,7 +35,7 @@ body {
         background-color: $lightColor;
         padding: $padding;
         display: grid;
-        grid-template-columns: 0.3fr 0.3fr 1fr;
+        grid-template-columns: 0.3fr 0.1fr 1fr;
         grid-template-rows: 1fr;
         grid-template-areas: "header-logo . header-nav";
         .header__logo_width {
@@ -334,15 +326,17 @@ body {
         grid-template-rows: 150px 0.7fr 0.7fr 0.7fr 100px;
         .header {
             padding: 0;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-template-areas:
-                "header-logo header-logo header-logo"
-                "header-nav header-nav header-nav";
+            display: block;
+            // grid-template-columns: 1fr;
+            // grid-template-rows: 1fr 1fr;
+            // grid-template-areas:
+            //     " header-logo header-logo header-logo"
+            //     "header-nav header-nav header-nav";
             .header__logo {
-                justify-self: center;
-                align-self: center;
                 text-align: center;
+                margin-bottom: 10px;
+                // justify-self: center;
+                // align-self: center;
             }
             .header__nav {
                 display: none;
@@ -351,10 +345,10 @@ body {
                 // grid-template-rows: 1fr 1fr;
             }
             .nav {
-                grid-area: header-nav;
+                // grid-area: header-nav;
                 display: block;
-                justify-self: center;
-                align-self: center;
+                // justify-self: center;
+                // align-self: center;
                 .nav-item {
                     a {
                         color: $darkColor;
@@ -364,10 +358,12 @@ body {
                     }
                     .dropdown-menu {
                         color: $darkColor;
+                        width: 100%;
                         .dropdown-item {
                             text-align: center;
                         }
-                        .dropdown-item.active, .dropdown-item:active {
+                        .dropdown-item.active,
+                        .dropdown-item:active {
                             color: $darkColor;
                             text-decoration: none;
                             background-color: $orangeColor;
@@ -375,7 +371,7 @@ body {
                     }
                 }
             }
-            .nav-pills .show>.nav-link {
+            .nav-pills .show > .nav-link {
                 background-color: $orangeColor;
                 color: $darkColor;
             }

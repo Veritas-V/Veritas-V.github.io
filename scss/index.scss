@@ -1333,6 +1333,7 @@ body {
                     }
                     .dropdown-menu {
                         color: $darkColor;
+                        width: 100%;
                         .dropdown-item {
                             text-align: center;
                         }
@@ -1535,6 +1536,15 @@ body {
             .screenshots__slider {
                 width: 67%;
                 align-self: start;
+                .slider_img {
+                    .arrow {
+                        position: absolute;
+                        font-size: 60pt;
+                        top: 45%;
+                        right: 15%;
+                        transform: translateY(-50%);
+                    }
+                }
             }
         }
         .comments {
@@ -2340,11 +2350,38 @@ body {
 }
 @media only screen and (min-width: 993px) and (max-width: 1300px) {
     body {
+        max-width: 1300px;
+        margin: 0;
+        // grid-template-columns: 100%;
+        grid-template-rows: 100px 860px 835px 805px 650px 520px 985px 530px 890px 745px 100px;
+        grid-template-areas:
+            "header"
+            "sub-header"
+            "features"
+            "check"
+            "screenhots"
+            "comments"
+            "support"
+            "newsletter"
+            "blog"
+            "get"
+            "footer";
+        // .scrollup {
+        //     display: none;
+        // }
+        .header {
+            padding: 0;
+            grid-template-columns: 0.3fr 0.3fr 1fr;
+            grid-template-areas: "header-logo . header-nav";
+            .header__nav {
+                margin-right: 0;
+            }
+        }
         .sub__header {
             padding: 0;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 860px;
-            grid-gap: 0;
+            grid-gap: 20px;
             .sub__phone {
                 grid-template-columns: 1fr;
                 .phone__apple {
@@ -2365,10 +2402,83 @@ body {
                     display: none;
                 }
             }
-            .sub__empires {
-                padding-left: 20px;
-                padding-right: 150px;
+        }
+        .content {
+            padding: 0;
+        }
+        .check {
+            padding: 0;
+            .check__time {
+                .time__banner {
+                    font-size: 16.5px;
+                }
             }
+            .check__space {
+                .space__banner {
+                    font-size: 16.5px;
+                }
+            }
+            .check__settings {
+                .settings__banner {
+                    font-size: 16.5px;
+                }
+            }
+        }
+        .screenshots {
+            grid-template-rows: 101.25px 498.75px;
+
+            .screenshots__banner {
+                font-size: 48px;
+            }
+            .screenshots__slider {
+                width: 70%;
+            }
+        }
+        .comments {
+            grid-template-rows: 520px;
+            padding: 0;
+        }
+        .support {
+            padding: 0;
+            .support__banner {
+                font-size: 60px;
+            }
+            .support__contact {
+                font-size: 27px;
+            }
+            .support__user {
+                .user__info_one,
+                .user__info_two,
+                .user__info_three,
+                .user__info_four {
+                    .info__photo {
+                        img {
+                            width: 180px;
+                        }
+                    }
+                }
+            }
+        }
+        .newsletter {
+            padding: 0;
+            .newsletter__banner {
+                font-size: 60px;
+            }
+        }
+        .blog {
+            padding: 0;
+            .blog__banner {
+                font-size: 60px;
+            }
+        }
+        .get {
+            padding: 0;
+            .get__banner {
+                font-size: 60px;
+            }
+        }
+        .footer {
+            padding: 0;
         }
     }
 }
