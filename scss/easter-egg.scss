@@ -288,11 +288,14 @@ body {
             }
         }
         .support {
-            padding: 0 30px;
-            display: block;
+            align-self: center;
+            justify-self: center;
+            width: 100%;
+            padding: 0 60px;
             // grid-template-rows: 50px 56vh;
-            .support__banner {
-                font-size: 42px;
+            #egg {
+                align-self: center;
+                justify-self: center;
             }
         }
         .footer {
