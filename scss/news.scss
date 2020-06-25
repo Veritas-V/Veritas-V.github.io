@@ -245,15 +245,17 @@ body {
         grid-template-rows: 150px 1fr 100px;
         .header {
             padding: 0;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-template-areas:
-                "header-logo header-logo header-logo"
-                "header-nav header-nav header-nav";
+            display: block;
+            // grid-template-columns: 1fr;
+            // grid-template-rows: 1fr 1fr;
+            // grid-template-areas:
+            //     " header-logo header-logo header-logo"
+            //     "header-nav header-nav header-nav";
             .header__logo {
-                justify-self: center;
-                align-self: center;
                 text-align: center;
+                margin-bottom: 10px;
+                // justify-self: center;
+                // align-self: center;
             }
             .header__nav {
                 display: none;
@@ -262,10 +264,10 @@ body {
                 // grid-template-rows: 1fr 1fr;
             }
             .nav {
-                grid-area: header-nav;
+                // grid-area: header-nav;
                 display: block;
-                justify-self: center;
-                align-self: center;
+                // justify-self: center;
+                // align-self: center;
                 .nav-item {
                     a {
                         color: $darkColor;
@@ -275,10 +277,12 @@ body {
                     }
                     .dropdown-menu {
                         color: $darkColor;
+                        width: 100%;
                         .dropdown-item {
                             text-align: center;
                         }
-                        .dropdown-item.active, .dropdown-item:active {
+                        .dropdown-item.active,
+                        .dropdown-item:active {
                             color: $darkColor;
                             text-decoration: none;
                             background-color: $orangeColor;
@@ -286,13 +290,13 @@ body {
                     }
                 }
             }
-            .nav-pills .show>.nav-link {
+            .nav-pills .show > .nav-link {
                 background-color: $orangeColor;
                 color: $darkColor;
             }
         }
         .news {
-            padding: 0 30px;
+            padding: 0;
             .news__banner {
                 font-size: 42px;
             }

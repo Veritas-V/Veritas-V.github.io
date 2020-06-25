@@ -1840,7 +1840,7 @@ body .scrollup:hover {
     display: block;
   }
   body .header {
-    padding: 0;
+    padding: 0 30px;
     display: block;
   }
   body .header .header__logo {
@@ -1878,7 +1878,7 @@ body .scrollup:hover {
   }
   body .sub__header {
     display: block;
-    padding: 0;
+    padding: 0 30px;
   }
   body .sub__header .sub__phone {
     display: none;
@@ -1914,7 +1914,7 @@ body .scrollup:hover {
   }
   body .content {
     display: block;
-    padding: 0;
+    padding: 0 30px;
   }
   body .content .content__banner {
     font-size: 42px;
@@ -1952,8 +1952,7 @@ body .scrollup:hover {
   }
   body .check {
     display: block;
-    padding: 0;
-    padding: 0;
+    padding: 0 30px;
   }
   body .check .check__banner {
     font-size: 42px;
@@ -2052,7 +2051,7 @@ body .scrollup:hover {
   }
   body .comments {
     display: block;
-    padding: 0;
+    padding: 0 30px;
   }
   body .comments #nav_comments {
     width: 100%;
@@ -2082,7 +2081,7 @@ body .scrollup:hover {
   }
   body .support {
     display: block;
-    padding: 0;
+    padding: 0 30px;
   }
   body .support .support__banner {
     font-size: 42px;
@@ -2114,12 +2113,24 @@ body .scrollup:hover {
   body .support .support__user .user__info_four {
     display: block;
   }
+  body .support .support__user .user__info_one .info__name,
+  body .support .support__user .user__info_two .info__name,
+  body .support .support__user .user__info_three .info__name,
+  body .support .support__user .user__info_four .info__name {
+    text-align: center;
+  }
   body .support .support__user .user__info_one .info__name span,
   body .support .support__user .user__info_two .info__name span,
   body .support .support__user .user__info_three .info__name span,
   body .support .support__user .user__info_four .info__name span {
     font-size: 16px;
     font-weight: 600;
+  }
+  body .support .support__user .user__info_one .info__bio,
+  body .support .support__user .user__info_two .info__bio,
+  body .support .support__user .user__info_three .info__bio,
+  body .support .support__user .user__info_four .info__bio {
+    text-align: center;
   }
   body .support .support__user .user__info_one .info__photo,
   body .support .support__user .user__info_two .info__photo,
@@ -2137,15 +2148,15 @@ body .scrollup:hover {
   body .support .support__user .user__info_two .info__network,
   body .support .support__user .user__info_three .info__network,
   body .support .support__user .user__info_four .info__network {
-    text-align: right;
+    text-align: center;
   }
   body .support .support__user .user__info_two .info__network,
   body .support .support__user .user__info_four .info__network {
-    text-align: left;
+    text-align: center;
   }
   body .newsletter {
     display: block;
-    padding: 0;
+    padding: 0 20px;
   }
   body .newsletter .newsletter__banner {
     padding: 0;
@@ -2162,7 +2173,7 @@ body .scrollup:hover {
   }
   body .blog {
     display: block;
-    padding: 0;
+    padding: 0 30px;
     background: none;
   }
   body .blog #nav_blog .but {
@@ -2199,7 +2210,7 @@ body .scrollup:hover {
   }
   body .get {
     display: block;
-    padding: 0;
+    padding: 0 30px;
   }
   body .get .get__banner {
     font-size: 42px;
@@ -2213,7 +2224,7 @@ body .scrollup:hover {
   }
   body .footer {
     display: block;
-    padding: 0;
+    padding: 0 30px;
   }
   body .footer .footer__anchor {
     padding: 0;
@@ -2228,7 +2239,7 @@ body .scrollup:hover {
     display: block;
   }
   body .header {
-    padding: 0;
+    padding: 0 30px;
     display: block;
   }
   body .header .header__logo {
@@ -2243,7 +2254,7 @@ body .scrollup:hover {
   }
   body .sub__header {
     display: block;
-    padding: 0;
+    padding: 0 30px;
   }
   body .sub__header .sub__phone {
     display: none;
@@ -2279,7 +2290,7 @@ body .scrollup:hover {
   }
   body .content {
     display: block;
-    padding: 0;
+    padding: 0 30px;
   }
   body .content .content__banner {
     font-size: 42px;
@@ -2317,8 +2328,7 @@ body .scrollup:hover {
   }
   body .check {
     display: block;
-    padding: 0;
-    padding: 0;
+    padding: 0 30px;
   }
   body .check .check__banner {
     font-size: 42px;
@@ -2393,7 +2403,7 @@ body .scrollup:hover {
   body .screenshots {
     display: block;
     text-align: center;
-    padding: 0;
+    padding: 0 30px;
   }
   body .screenshots .screenshots__banner {
     -ms-flex-item-align: center;
@@ -2409,7 +2419,7 @@ body .scrollup:hover {
   }
   body .comments {
     display: block;
-    padding: 0;
+    padding: 0 30px;
   }
   body .comments #nav_comments {
     width: 100%;
@@ -2439,7 +2449,7 @@ body .scrollup:hover {
   }
   body .support {
     display: block;
-    padding: 0;
+    padding: 0 30px;
   }
   body .support .support__banner {
     font-size: 42px;
@@ -2471,12 +2481,24 @@ body .scrollup:hover {
   body .support .support__user .user__info_four {
     display: block;
   }
+  body .support .support__user .user__info_one .info__name,
+  body .support .support__user .user__info_two .info__name,
+  body .support .support__user .user__info_three .info__name,
+  body .support .support__user .user__info_four .info__name {
+    text-align: center;
+  }
   body .support .support__user .user__info_one .info__name span,
   body .support .support__user .user__info_two .info__name span,
   body .support .support__user .user__info_three .info__name span,
   body .support .support__user .user__info_four .info__name span {
     font-size: 16px;
     font-weight: 600;
+  }
+  body .support .support__user .user__info_one .info__bio,
+  body .support .support__user .user__info_two .info__bio,
+  body .support .support__user .user__info_three .info__bio,
+  body .support .support__user .user__info_four .info__bio {
+    text-align: center;
   }
   body .support .support__user .user__info_one .info__photo,
   body .support .support__user .user__info_two .info__photo,
@@ -2494,14 +2516,14 @@ body .scrollup:hover {
   body .support .support__user .user__info_two .info__network,
   body .support .support__user .user__info_three .info__network,
   body .support .support__user .user__info_four .info__network {
-    text-align: right;
+    text-align: center;
   }
   body .support .support__user .user__info_two .info__network,
   body .support .support__user .user__info_four .info__network {
-    text-align: left;
+    text-align: center;
   }
   body .newsletter {
-    padding: 0;
+    padding: 0 30px;
   }
   body .newsletter .newsletter__banner {
     padding: 0 30px;
@@ -2512,7 +2534,7 @@ body .scrollup:hover {
   }
   body .blog {
     display: block;
-    padding: 0;
+    padding: 0 30px;
     background: none;
   }
   body .blog #nav_blog .but {
@@ -2548,19 +2570,13 @@ body .scrollup:hover {
     display: block;
   }
   body .get {
-    padding: 0;
+    padding: 0 30px;
   }
   body .get .get__banner {
     font-size: 42px;
   }
-  body .get .get__content {
-    padding: 0 30px;
-  }
-  body .get .get__form {
-    padding: 0 30px;
-  }
   body .footer {
-    padding: 0;
+    padding: 0 30px;
   }
   body .footer .footer__anchor {
     padding: 0 30px;
@@ -2577,7 +2593,7 @@ body .scrollup:hover {
         grid-template-areas: "header" "sub-header" "features" "check" "screenhots" "comments" "support" "newsletter" "blog" "get" "footer";
   }
   body .header {
-    padding: 0;
+    padding: 0 30px;
     -ms-grid-columns: 0.3fr 0.3fr 1fr;
         grid-template-columns: 0.3fr 0.3fr 1fr;
         grid-template-areas: "header-logo . header-nav";
@@ -2624,10 +2640,10 @@ body .scrollup:hover {
     display: none;
   }
   body .content {
-    padding: 0;
+    padding: 0 30px;
   }
   body .check {
-    padding: 0;
+    padding: 0 30px;
   }
   body .check .check__time .time__banner {
     font-size: 16.5px;
@@ -2641,6 +2657,7 @@ body .scrollup:hover {
   body .screenshots {
     -ms-grid-rows: 101.25px 498.75px;
         grid-template-rows: 101.25px 498.75px;
+    padding: 0 30px;
   }
   body .screenshots .screenshots__banner {
     font-size: 48px;
@@ -2651,10 +2668,10 @@ body .scrollup:hover {
   body .comments {
     -ms-grid-rows: 520px;
         grid-template-rows: 520px;
-    padding: 0;
+    padding: 0 30px;
   }
   body .support {
-    padding: 0;
+    padding: 0 30px;
   }
   body .support .support__banner {
     font-size: 60px;
@@ -2669,25 +2686,25 @@ body .scrollup:hover {
     width: 180px;
   }
   body .newsletter {
-    padding: 0;
+    padding: 0 30px;
   }
   body .newsletter .newsletter__banner {
     font-size: 60px;
   }
   body .blog {
-    padding: 0;
+    padding: 0 30px;
   }
   body .blog .blog__banner {
     font-size: 60px;
   }
   body .get {
-    padding: 0;
+    padding: 0 30px;
   }
   body .get .get__banner {
     font-size: 60px;
   }
   body .footer {
-    padding: 0;
+    padding: 0 30px;
   }
 }
 
